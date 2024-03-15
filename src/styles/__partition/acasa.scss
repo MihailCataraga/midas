@@ -1,0 +1,81 @@
+.acasa{
+    main{
+        .sec-2{
+            display: flex;
+            align-items: center;
+            background-color: black;
+            .imgsLeft{
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                #img1{
+                    position: relative;
+                    width: 300px;
+                    animation-name: img1;
+                    animation-duration: 10s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+
+                }
+            }
+            .textRight{
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                p{
+                    font-size: 32px;
+                    max-width: 34vw;
+                    padding: 0 8vw;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@keyframes img1 {
+    0% {
+        transform: translateX(0px);
+        z-index: 100;
+
+    }
+    12% {
+        transform: translateX(-75px);
+        z-index: 99;
+        width: 275px;
+    }
+    25% {
+        transform: translateX(-150px);
+        width: 250px;
+        z-index: 99;
+    }
+    37%{
+        transform: translateX(-75px);
+        width: 225px;
+        z-index: 99;
+    }
+    50% {
+        transform: translateX(0px);
+        width: 200px;
+        z-index: 99;
+    }
+    62%{
+        transform: translateX(75px);
+        z-index: 99;
+        width: 225px;
+    }
+    75% {
+        transform: translateX(150px);
+        width: 250px;
+        z-index: 99;
+    }
+    87%{
+        transform: translateX(75px);
+        z-index: 99;
+        width: 275px;
+    }
+    100% {
+        transform: translateX(0px);
+        z-index: 100;
+    }
+}
