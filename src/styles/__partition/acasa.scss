@@ -1,13 +1,13 @@
 .acasa{
     main{
         #figura {
-            width: 500px;
+            width: 350px;
             height: 500px;
             background-color: rgba(185, 67, 214, 0.438);
             box-shadow: 0 0 50px 50px rgba(185, 67, 214, 0.438);
-            clip-path: polygon(96% 9%, 77% 20%, 57% 2%, 33% 6%, 21% 21%, 16% 43%, 16% 68%, 35% 87%, 63% 90%, 93% 83%, 70% 61%, 95% 48%, 90% 33%);
             position: fixed;
             border-radius: 50%; /* Pentru a face figura rotundă */
+            transform: rotateZ(45deg);
         }
         .sec-1{
             background-color: transparent;
