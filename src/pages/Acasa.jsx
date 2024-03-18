@@ -20,8 +20,8 @@ export default function Acasa() {
     });
   return (
     <div className='acasa'>
+        <div id='figura'></div>
         <main>
-            <div id='figura'></div>
             <div className='sec-1'>
                 <div className='leftCol'>
                     <h1>Transformăm visele în web site-uri funcționale</h1>

@@ -4,6 +4,8 @@
 }
 body{
     background-image: url('../assets/imgs/background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 @import './__partition/acasa.scss';
