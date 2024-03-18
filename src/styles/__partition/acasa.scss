@@ -70,12 +70,15 @@
         height: 400px;
         top: -125px;
     }
+    27.8%{
+        z-index: 99;
+    }
     33.2%{
         transform: translateX(-175px);
         width: 250px;
         top: -275px;
         height: 350px;
-        z-index: 98;
+        z-index: 99;
     }
     60.9%{
         transform: translateX(-175px);
@@ -89,7 +92,7 @@
         width: 250px;
         top: -275px;
         height: 350px;
-        z-index: 99;
+        z-index: 98;
     }
     94.1%{
         transform: translateX(175px);
@@ -97,6 +100,9 @@
         top: -275px;
         height: 350px;
         z-index: 99;
+    }
+    94.2%{
+        z-index: 100;
     }
     100% {
         transform: translateX(0px);
@@ -113,7 +119,7 @@
         width: 250px;
         top: -275px;
         height: 350px;
-        z-index: 98;
+        z-index: 99;
     }
     27.7%{
         transform: translateX(-175px);
@@ -127,7 +133,7 @@
         width: 250px;
         top: -275px;
         height: 350px;
-        z-index: 99;
+        z-index: 98;
     }
     60.9%{
         transform: translateX(175px);
@@ -135,6 +141,9 @@
         top: -275px;
         height: 350px;
         z-index: 99;
+    }
+    61%{
+        z-index: 100;
     }
     66.4%{
         transform: translateX(0px);
@@ -150,12 +159,15 @@
         height: 400px;
         top: -125px;
     }
+    94.2%{
+        z-index: 99;
+    }
     100% {
         transform: translateX(-175px);
         width: 250px;
         top: -275px;
         height: 350px;
-        z-index: 98;
+        z-index: 99;
     }
 }
 
@@ -165,7 +177,7 @@
         width: 250px;
         top: -275px;
         height: 350px;
-        z-index: 99;
+        z-index: 98;
     }
     27.7%{
         transform: translateX(175px);
@@ -173,6 +185,9 @@
         top: -275px;
         height: 350px;
         z-index: 99;
+    }
+    27.8%{
+        z-index: 100;
     }
     33.2%{
         transform: translateX(0px);
@@ -188,12 +203,15 @@
         height: 400px;
         top: -125px;
     }
+    61%{
+        z-index: 99;
+    }
     66.4%{
         transform: translateX(-175px);
         width: 250px;
         top: -275px;
         height: 350px;
-        z-index: 98;
+        z-index: 99;
     }
     94.1%{
         transform: translateX(-175px);
@@ -207,6 +225,6 @@
         width: 250px;
         top: -275px;
         height: 350px;
-        z-index: 99;
+        z-index: 98;
     }
 }
