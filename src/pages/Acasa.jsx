@@ -1,13 +1,61 @@
 import React, { useEffect } from 'react';
+import { FaSearch } from "react-icons/fa";
+import { FaInstagram, FaXTwitter, FaFacebook } from "react-icons/fa6";
 import Img1 from '../assets/imgs/Poza 1.png';
 import Img2 from '../assets/imgs/Poza 2.png';
 import Img3 from '../assets/imgs/Poza 3.png';
 
 export default function Acasa() {
-    
+    document.addEventListener('mousemove', function(event) {
+        setTimeout(() => {
+            var figura = document.getElementById('figura');
+            var mouseX = event.clientX;
+            var mouseY = event.clientY;
+        
+            // Actualizăm poziția figurii pentru a urmări cursorul
+            figura.style.left = (mouseX - figura.offsetWidth / 2) + 'px'; // Centrăm figura pe cursor
+            figura.style.top = (mouseY - figura.offsetHeight / 2) + 'px';
+        }, 100)
+        
+    });
   return (
     <div className='acasa'>
         <main>
+            <div id='figura'></div>
+            <div className='sec-1'>
+                <div className='leftCol'>
+                    <h1>Transformăm visele în web site-uri funcționale</h1>
+                </div>
+                <div className='rightCol'>
+                    <div className='contentBoxEx'>
+                        <div className='navbarEx'>
+                            <div className='logoEx'>YOUR LOGO</div>
+                            <div className='navbarEx'>
+                                <p>SERVICE</p>
+                                <p>ABOUT</p>
+                                <p>PRICE</p>
+                                <p>NEWS</p>
+                                <FaSearch className='icon' />
+                            </div>
+                        </div>
+                        <div className='mainEx'>
+                            <div className='leftEx'>
+                                <h2>PAGE DESIGN</h2>
+                                <button>LEARN MORE</button>
+                                <div className='optionsEx'>
+                                    <p>FOLLOW</p>
+                                    <FaInstagram className='icon' />
+                                    <FaXTwitter className='icon' />
+                                    <FaFacebook className='icon' />
+                                </div>
+                            </div>
+                            <div className='rightEx'>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className='sec-2'>
                 <div className='imgsLeft'>
                     <img id='img3' src={Img1} alt='Simbol img 1' />
