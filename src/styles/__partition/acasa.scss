@@ -32,12 +32,6 @@
                 }
                 .rightCol {
                     flex: 1.15;
-                    // background-image: url('../assets/imgs/backgroundCard.png');
-                    // background-repeat: no-repeat;
-                    // background-size: cover;
-                    // border: 1px solid #ffffff;
-                    // border-radius: 35px;
-                    // box-shadow: 0 0 20px 20px #00000020;
                     position: relative;
                     transition: all 0.6s ease-out;
                     perspective: 1000px;
@@ -65,7 +59,7 @@
                     .over:nth-child(4):hover 
                         ~ .contentBoxEx{ transform: rotateX(0deg) rotateY(2deg) }
                     .over:nth-child(5):hover 
-                        ~ .contentBoxEx{ transform: rotateX(0deg) rotateY(2deg) }
+                        ~ .contentBoxEx{ transform: rotateX(0deg) rotateY(0deg) }
                     .over:nth-child(6):hover 
                         ~ .contentBoxEx{ transform: rotateX(0deg) rotateY(-2deg) }
                     .over:nth-child(7):hover 
