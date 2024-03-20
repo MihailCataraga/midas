@@ -9,6 +9,21 @@ import Navbar from '../components/Navbar';
 import { Area, AreaChart, CartesianGrid, XAxis, YAxis } from 'recharts';
 
 export default function Acasa() {
+    // const animationCard = (event) => {
+    //     const card = document.getElementById('rightCol')
+    //     const rect = card.getBoundingClientRect();
+
+    //     // Calculăm centrul div-ului
+    //     const centerX = rect.left + rect.width / 2;
+    //     const centerY = rect.top + rect.height / 2;
+    //     const mouseX = event.clientX;
+    //     const mouseY = event.clientY;
+
+    //     console.log("Centrul div-ului:", centerX, centerY);
+    //     console.log("Mouse:", mouseX, mouseY);
+        
+
+    // }
     useEffect(() => {
         const figura = document.getElementById('figura');
 
@@ -25,12 +40,44 @@ export default function Acasa() {
             }, 150); // Delay-ul de 50 de milisecunde
         };
 
+        // const animationCard = (event) => {
+        //     const card = document.getElementById('rightCol')
+        //     const rect = card.getBoundingClientRect();
+    
+        //     // Calculăm centrul div-ului
+        //     const centerX = rect.left + rect.width / 2;
+        //     const centerY = rect.top + rect.height / 2;
+        //     const mouseX = event.clientX;
+        //     const mouseY = event.clientY;
+    
+        //     console.log("Centrul div-ului:", centerX, centerY);
+        //     console.log("Partea stanga:", rect.left);
+
+        //     const centerToLeft = centerX - rect.left;
+        //     console.log("CenterToLeft",centerToLeft)
+            
+        //     console.log("Mouse:", mouseX, mouseY);
+        //     if((mouseX >= rect.left && mouseX <= centerX) && (mouseY >= rect.top && mouseY <= centerY)) {
+        //         card.style.transform = `rotateY(${mouseX / 100 * 2}deg) rotateX(${mouseY /100 * 2}deg)`
+        //         card.style.transformStyle = "preserve-3d"
+        //     } else if((mouseX <= (rect.left + rect.width) && mouseX >= centerX) && (mouseY >= rect.top && mouseY <= centerY)) {
+        //         card.style.transform = `rotateY(-${mouseX / 100 * 2}deg) rotateX(-${mouseY /100 * 2}deg)`
+        //     } else {
+        //         card.style.transform = `rotateY(0deg) rotateX(0deg)`
+        //         // card.style.transformStyle = "preserve-3d"
+        //     }
+            
+    
+        // }
+
         // Atașăm evenimentul de mișcare a cursorului la document
         document.addEventListener('mousemove', handleMouseMove);
+        // document.addEventListener('mousemove', animationCard);
 
         // Curățăm evenimentele atașate când componenta este dezmontată
         return () => {
             document.removeEventListener('mousemove', handleMouseMove);
+            // document.removeEventListener('mousemove', animationCard);
         };
     }, []);
 
@@ -48,6 +95,15 @@ export default function Acasa() {
                             <h1>Transformăm visele în web site-uri funcționale</h1>
                         </div>
                         <div className='rightCol' id='rightCol'>
+                            <span className='over'></span>
+                            <span className='over'></span>
+                            <span className='over'></span>
+                            <span className='over'></span>
+                            <span className='over'></span>
+                            <span className='over'></span>
+                            <span className='over'></span>
+                            <span className='over'></span>
+                            <span className='over'></span>
                             <div className='contentBoxEx'>
                                 <div className='navbarEx'>
                                     <div className='logoEx'>YOUR LOGO</div>
