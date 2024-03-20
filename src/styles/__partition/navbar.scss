@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px;
+    a {
+        padding: 10px 25px;
+        background: transparent;
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        border-radius: 25px;
+        font-size: 18px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .logo {
+        p {
+            color: #ffffff;
+            font-size: 36px;
+        }
+    }
+
+    .menuIcon {
+        .icon {
+            color: #ffffff;
+            font-size: 32px;
+            cursor: pointer;
+        }
+    }
+}

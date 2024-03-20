@@ -1,11 +1,15 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Acasa from './pages/Acasa';
 import './styles/index.scss';
 function App() {
 
   return (
-    <div>
-      <Acasa />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Acasa />} />
+      </Routes>
+    </BrowserRouter>
+    
   )
 }
 
