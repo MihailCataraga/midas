@@ -51,23 +51,23 @@
                     .over:nth-child(8){ left: 33.333%; top: 66.666%}
                     .over:nth-child(9){ left: 66.666%; top: 66.666%}
                     .over:nth-child(1):hover 
-                        ~ .contentBoxEx{ transform: rotateX(-2deg) rotateY(2deg) }
+                        ~ .contentBoxEx{ transform: rotateX(-3deg) rotateY(3deg) }
                     .over:nth-child(2):hover 
-                        ~ .contentBoxEx{ transform: rotateX(-2deg) rotateY(0deg) }
+                        ~ .contentBoxEx{ transform: rotateX(-3deg) rotateY(0deg) }
                     .over:nth-child(3):hover 
-                        ~ .contentBoxEx{ transform: rotateX(-2deg) rotateY(-2deg) }
+                        ~ .contentBoxEx{ transform: rotateX(-3deg) rotateY(-3deg) }
                     .over:nth-child(4):hover 
-                        ~ .contentBoxEx{ transform: rotateX(0deg) rotateY(2deg) }
+                        ~ .contentBoxEx{ transform: rotateX(0deg) rotateY(3deg) }
                     .over:nth-child(5):hover 
                         ~ .contentBoxEx{ transform: rotateX(0deg) rotateY(0deg) }
                     .over:nth-child(6):hover 
-                        ~ .contentBoxEx{ transform: rotateX(0deg) rotateY(-2deg) }
+                        ~ .contentBoxEx{ transform: rotateX(0deg) rotateY(-3deg) }
                     .over:nth-child(7):hover 
-                        ~ .contentBoxEx{ transform: rotateX(2deg) rotateY(2deg) }
+                        ~ .contentBoxEx{ transform: rotateX(3deg) rotateY(3deg) }
                     .over:nth-child(8):hover 
-                        ~ .contentBoxEx{ transform: rotateX(2deg) rotateY(0deg) }
+                        ~ .contentBoxEx{ transform: rotateX(3deg) rotateY(0deg) }
                     .over:nth-child(9):hover 
-                        ~ .contentBoxEx{ transform: rotateX(2deg) rotateY(-2deg) }
+                        ~ .contentBoxEx{ transform: rotateX(3deg) rotateY(-3deg) }
                     .contentBoxEx {
                         display: flex;
                         background-image: url('../assets/imgs/backgroundCard.png');
