@@ -12,30 +12,31 @@ export default function Acasa() {
     useEffect(() => {
         const figura = document.getElementById('figura');
 
-        // Funcții de eveniment pentru div-ul 'figura'
-        const handleMouseMoveFigura = function(event) {
+        // Funcția pentru a gestiona mișcarea cursorului
+        const handleMouseMove = function(event) {
+            // Coordonatele cursorului mouse-ului
             const mouseX = event.clientX;
             const mouseY = event.clientY;
 
-            figura.style.left = (mouseX - figura.offsetWidth / 2) + 'px';
-            figura.style.top = (mouseY - figura.offsetHeight / 2) + 'px';
+            // Amânăm actualizarea poziției elementului cu 50 de milisecunde (sau orice alt interval dorit)
+            setTimeout(() => {
+                figura.style.left = (mouseX - figura.offsetWidth / 2) + 'px';
+                figura.style.top = (mouseY - figura.offsetHeight / 2) + 'px';
+            }, 150); // Delay-ul de 50 de milisecunde
         };
 
-        document.addEventListener('mousemove', handleMouseMoveFigura);
+        // Atașăm evenimentul de mișcare a cursorului la document
+        document.addEventListener('mousemove', handleMouseMove);
 
-        setTimeout(() => {
-            document.addEventListener('mousemove', handleMouseMoveFigura);
-        }, 500)
-
-        // Curăță evenimentele atașate când componenta este dezmontată
+        // Curățăm evenimentele atașate când componenta este dezmontată
         return () => {
-            document.removeEventListener('mousemove', handleMouseMoveFigura);
+            document.removeEventListener('mousemove', handleMouseMove);
         };
     }, []);
 
     // Width pentru chart
     const width = window.innerWidth / 100 * 30;
-    
+
     return (
         <div className='acasaPage'>
             <div id='figura'></div>
