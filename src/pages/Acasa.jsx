@@ -6,7 +6,7 @@ import Img1 from '../assets/imgs/Poza 1.png';
 import Img2 from '../assets/imgs/Poza 2.png';
 import Img3 from '../assets/imgs/Poza 3.png';
 import Navbar from '../components/Navbar';
-import { Area, AreaChart, CartesianGrid, Tooltip, XAxis, YAxis } from 'recharts';
+import { Area, AreaChart, CartesianGrid, XAxis, YAxis } from 'recharts';
 
 export default function Acasa() {
     useEffect(() => {
@@ -22,6 +22,10 @@ export default function Acasa() {
         };
 
         document.addEventListener('mousemove', handleMouseMoveFigura);
+
+        setTimeout(() => {
+            document.addEventListener('mousemove', handleMouseMoveFigura);
+        }, 500)
 
         // Curăță evenimentele atașate când componenta este dezmontată
         return () => {

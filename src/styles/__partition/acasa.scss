@@ -33,7 +33,9 @@
 
                 .rightCol {
                     flex: 1.15;
-                    background-color: rgba(255, 255, 255, 0.15);
+                    background-image: url('../assets/imgs/backgroundCard.png');
+                    background-repeat: no-repeat;
+                    background-size: cover;
                     border: 1px solid #ffffff;
                     border-radius: 35px;
                     box-shadow: 0 0 20px 20px #00000020;
