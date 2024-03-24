@@ -29,7 +29,7 @@
         }
     }
     .menu{
-        position: absolute;
+        position: fixed;
         width: 300px;
         height: 100vh;
         background-color: rgb(32, 13, 56);
@@ -43,6 +43,7 @@
             color: #ffffff;
             font-size: 32px;
             margin: 10px 15px;
+            cursor: pointer;
         }
         nav{
             display: flex;
@@ -54,9 +55,21 @@
                 font-size: 24px;
                 margin: 5px 0 5px 25px;
             }
+            a:hover{
+                color: #793e92;
+            }
+            .active{
+                color: #793e92;
+            }
             .lang{
                 display: flex;
                 align-items: center;
+                margin-left: 25px;
+                img{
+                    width: 30px;
+                    margin-right: 20px;
+                    margin-top: 20px;
+                }
             }
         }
         .social{

@@ -31,7 +31,7 @@ export default function Acasa() {
             setTimeout(() => {
                 figura.style.left = (mouseX - figura.offsetWidth / 2) + 'px';
                 figura.style.top = (mouseY - figura.offsetHeight / 2) + 'px';
-            }, 300); // Delay-ul de 50 de milisecunde
+            }, 150); // Delay-ul de 50 de milisecunde
         };
 
         // Atașăm evenimentul de mișcare a cursorului la document
