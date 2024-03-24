@@ -14,15 +14,16 @@ export default function Acasa() {
     const [dot, setDot] = useState(1);
 
     // Animation Card
-    const setAnimation = () => {
-        const cardBox = document.getElementById('cardBox');
-        const card = document.getElementById('card');
-        cardBox.style.animation = 'scale(1.2)';
-        card.style.animation = 'text 5s linear infinite';
-    }
+    // const setAnimation = () => {
+    //     const cardBox = document.getElementById('cardBox');
+    //     const card = document.getElementById('card');
+    //     // cardBox.style.animation = 'scale(1.2)';
+    //     card.style.animation = 'text 5s linear infinite';
+    // }
     useEffect(() => {
         const interval = setInterval(() => {
             const card = document.getElementById('cardBox');
+            card.style.animation = 'text 5s linear infinite';
             setDot(prevDot => (prevDot < dataCard.length ? prevDot + 1 : 1));
         }, 5000);
         
