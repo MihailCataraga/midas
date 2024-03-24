@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 40px 80px;
+    position: relative;
     a {
         padding: 10px 25px;
         background: transparent;
@@ -26,5 +27,78 @@
             font-size: 32px;
             cursor: pointer;
         }
+    }
+    .menu{
+        position: absolute;
+        width: 300px;
+        height: 100vh;
+        background-color: rgb(32, 13, 56);
+        top: 0;
+        right: 0px;
+        z-index: 1;
+        display: none;
+        flex-direction: column;
+        border-left: 1px solid white;
+        .icon{
+            color: #ffffff;
+            font-size: 32px;
+            margin: 10px 15px;
+        }
+        nav{
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            a{
+                padding: 0;
+                border: none;
+                font-size: 24px;
+                margin: 5px 0 5px 25px;
+            }
+            .lang{
+                display: flex;
+                align-items: center;
+            }
+        }
+        .social{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            display: flex;
+            width: 300px;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid white;
+            a{
+                padding: 0;
+                border: none;
+                .icon{
+                    font-size: 28px;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+    }
+}
+
+@keyframes menuShow {
+    from{
+        right: -300px;
+        display: none;
+    }
+    to{
+        right: 0;
+    }
+}
+
+@keyframes menuClose {
+    from{
+        right: 0;
+    }
+    to{
+        right: -300px;
     }
 }
