@@ -1,30 +1,31 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaSearch } from "react-icons/fa";
 import { FaInstagram, FaXTwitter, FaFacebook } from "react-icons/fa6";
+import { BiSolidBookContent } from "react-icons/bi";
 import data from '../data/ChartData';
 import Img1 from '../assets/imgs/Poza 1.png';
 import Img2 from '../assets/imgs/Poza 2.png';
 import Img3 from '../assets/imgs/Poza 3.png';
 import Navbar from '../components/Navbar';
 import { Area, AreaChart, CartesianGrid, XAxis, YAxis } from 'recharts';
+import dataCard from '../data/CardData';
 
 export default function Acasa() {
-    // const animationCard = (event) => {
-    //     const card = document.getElementById('rightCol')
-    //     const rect = card.getBoundingClientRect();
+    const [dot, setDot] = useState(1);
 
-    //     // Calculăm centrul div-ului
-    //     const centerX = rect.left + rect.width / 2;
-    //     const centerY = rect.top + rect.height / 2;
-    //     const mouseX = event.clientX;
-    //     const mouseY = event.clientY;
-
-    //     console.log("Centrul div-ului:", centerX, centerY);
-    //     console.log("Mouse:", mouseX, mouseY);
-        
-
-    // }
+    // Animation Card
+    const setAnimation = () => {
+        const cardBox = document.getElementById('cardBox');
+        const card = document.getElementById('card');
+        cardBox.style.animation = 'scale(1.2)';
+        card.style.animation = 'text 5s linear infinite';
+    }
     useEffect(() => {
+        const interval = setInterval(() => {
+            const card = document.getElementById('cardBox');
+            setDot(prevDot => (prevDot < dataCard.length ? prevDot + 1 : 1));
+        }, 5000);
+        
         const figura = document.getElementById('figura');
 
         // Funcția pentru a gestiona mișcarea cursorului
@@ -40,44 +41,13 @@ export default function Acasa() {
             }, 150); // Delay-ul de 50 de milisecunde
         };
 
-        // const animationCard = (event) => {
-        //     const card = document.getElementById('rightCol')
-        //     const rect = card.getBoundingClientRect();
-    
-        //     // Calculăm centrul div-ului
-        //     const centerX = rect.left + rect.width / 2;
-        //     const centerY = rect.top + rect.height / 2;
-        //     const mouseX = event.clientX;
-        //     const mouseY = event.clientY;
-    
-        //     console.log("Centrul div-ului:", centerX, centerY);
-        //     console.log("Partea stanga:", rect.left);
-
-        //     const centerToLeft = centerX - rect.left;
-        //     console.log("CenterToLeft",centerToLeft)
-            
-        //     console.log("Mouse:", mouseX, mouseY);
-        //     if((mouseX >= rect.left && mouseX <= centerX) && (mouseY >= rect.top && mouseY <= centerY)) {
-        //         card.style.transform = `rotateY(${mouseX / 100 * 2}deg) rotateX(${mouseY /100 * 2}deg)`
-        //         card.style.transformStyle = "preserve-3d"
-        //     } else if((mouseX <= (rect.left + rect.width) && mouseX >= centerX) && (mouseY >= rect.top && mouseY <= centerY)) {
-        //         card.style.transform = `rotateY(-${mouseX / 100 * 2}deg) rotateX(-${mouseY /100 * 2}deg)`
-        //     } else {
-        //         card.style.transform = `rotateY(0deg) rotateX(0deg)`
-        //         // card.style.transformStyle = "preserve-3d"
-        //     }
-            
-    
-        // }
-
         // Atașăm evenimentul de mișcare a cursorului la document
         document.addEventListener('mousemove', handleMouseMove);
-        // document.addEventListener('mousemove', animationCard);
 
         // Curățăm evenimentele atașate când componenta este dezmontată
         return () => {
             document.removeEventListener('mousemove', handleMouseMove);
-            // document.removeEventListener('mousemove', animationCard);
+            clearInterval(interval);
         };
     }, []);
 
@@ -165,12 +135,45 @@ export default function Acasa() {
                             <img id='img3' src={Img1} alt='Simbol img 1' />
                             <img id='img2' src={Img2} alt='Simbol img 2' />
                             <img id='img1' src={Img3} alt='Simbol img 3' />
-                            {/* <div id='img1'></div>
-                    <div id='img2'></div>
-                    <div id='img3'></div> */}
                         </div>
                         <div className='textRight'>
                             <p>La Midas Group, credem că fiecare afacere merită să aibă un site web care să se ridice la standardele cele mai înalte de calitate și profesionalism. Suntem dedicați să creăm site-uri web personalizate și inovatoare pentru clienții noștri. Indiferent dacă sunteți o afacere mică sau o corporație mare, suntem aici pentru a vă ajuta să vă transformați viziunea în realitate digitală.</p>
+                        </div>
+                    </div>
+                    <div className='sec-3'>
+                        <div className='left-text'>
+                            <h2>Ce tipuri de website-uri realizăm?</h2>
+                        </div>
+                        <div className='rightCol'>
+                            <div className='cardBox' id='cardBox'>
+                                <div className='card' id='card'>
+                                    <div className='top'>
+                                        <BiSolidBookContent className='icon' />
+                                        <h3>{dataCard[dot-1].title}</h3>
+                                    </div>
+                                    <p className='text'>{dataCard[dot-1].text}</p>
+                                    <div className='ideas'>
+                                        {dataCard[dot-1].ideas.map((idea) => {
+                                            return (
+                                                <span key={idea}>{idea}</span>
+                                            )
+                                        })}
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='cardDot'>
+                                {dataCard.map((item) => {
+                                    return (
+                                        <div 
+                                            className={dot === item.id ? 'dot active' : 'dot'} 
+                                            key={item.id}
+                                            onClick={() => {setDot(item.id); setAnimation()}}
+                                        >
+                                            
+                                        </div>
+                                    )
+                                })}
+                            </div>
                         </div>
                     </div>
                 </main>
