@@ -12,17 +12,20 @@ import dataCard from '../data/CardData';
 
 export default function Acasa() {
     const [dot, setDot] = useState(1);
+    const click = () => {
+        const card = document.getElementById('cardBox');
+        card.style.animation = 'display 10s linear infinite';
+    }
 
     useEffect(() => {
         const interval = setInterval(() => {
-            const card = document.getElementById('cardBox');
             setDot(prevDot => (prevDot < dataCard.length ? prevDot + 1 : 1));
         }, 10000);
-        
+
         const figura = document.getElementById('figura');
 
         // Funcția pentru a gestiona mișcarea cursorului
-        const handleMouseMove = function(event) {
+        const handleMouseMove = function (event) {
             // Coordonatele cursorului mouse-ului
             const mouseX = event.clientX;
             const mouseY = event.clientY;
@@ -133,7 +136,7 @@ export default function Acasa() {
                             <p>La Midas Group, credem că fiecare afacere merită să aibă un site web care să se ridice la standardele cele mai înalte de calitate și profesionalism. Suntem dedicați să creăm site-uri web personalizate și inovatoare pentru clienții noștri. Indiferent dacă sunteți o afacere mică sau o corporație mare, suntem aici pentru a vă ajuta să vă transformați viziunea în realitate digitală.</p>
                         </div>
                     </div>
-                    <div className='sec-3'>
+                    <div className='sec-4'>
                         <div className='left-text'>
                             <h2>Ce tipuri de website-uri realizăm?</h2>
                         </div>
@@ -142,11 +145,11 @@ export default function Acasa() {
                                 <div className='card' id='card'>
                                     <div className='top'>
                                         <BiSolidBookContent className='icon' />
-                                        <h3>{dataCard[dot-1].title}</h3>
+                                        <h3>{dataCard[dot - 1].title}</h3>
                                     </div>
-                                    <p className='text'>{dataCard[dot-1].text}</p>
+                                    <p className='text'>{dataCard[dot - 1].text}</p>
                                     <div className='ideas'>
-                                        {dataCard[dot-1].ideas.map((idea) => {
+                                        {dataCard[dot - 1].ideas.map((idea) => {
                                             return (
                                                 <span key={idea}>{idea}</span>
                                             )
@@ -157,8 +160,43 @@ export default function Acasa() {
                             <div className='cardDot'>
                                 {dataCard.map((item) => {
                                     return (
-                                        <div 
-                                            className={dot === item.id ? 'dot active' : 'dot'} 
+                                        <div
+                                            className={dot === item.id ? 'dot active' : 'dot'}
+                                            key={item.id}
+                                            onClick={() => {setDot(item.id); click()}}
+                                        >
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                    <div className='sec-3'>
+                        <div className='left-text'>
+                            <h2>Ce tipuri de website-uri realizăm?</h2>
+                        </div>
+                        <div className='rightCol'>
+                            <div className='cardBox' id='cardBox'>
+                                <div className='card' id='card'>
+                                    <div className='top'>
+                                        <BiSolidBookContent className='icon' />
+                                        <h3>{dataCard[dot - 1].title}</h3>
+                                    </div>
+                                    <p className='text'>{dataCard[dot - 1].text}</p>
+                                    <div className='ideas'>
+                                        {dataCard[dot - 1].ideas.map((idea) => {
+                                            return (
+                                                <span key={idea}>{idea}</span>
+                                            )
+                                        })}
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='cardDot'>
+                                {dataCard.map((item) => {
+                                    return (
+                                        <div
+                                            className={dot === item.id ? 'dot active' : 'dot'}
                                             key={item.id}
                                             onClick={() => setDot(item.id)}
                                         >
