@@ -12,6 +12,12 @@ import dataCard from '../data/CardData';
 
 export default function Acasa() {
     const [dot, setDot] = useState(1);
+    const [opacity1, setOpacity1] = useState(0);
+    const [opacity2, setOpacity2] = useState(0);
+    const [opacity3, setOpacity3] = useState(0);
+    const [opacity4, setOpacity4] = useState(0);
+    const [opacity5, setOpacity5] = useState(0);
+    const [opacity6, setOpacity6] = useState(0);
     const click = () => {
         const card = document.getElementById('cardBox');
         card.style.animation = 'display 10s linear infinite';
@@ -39,6 +45,33 @@ export default function Acasa() {
 
         //Scroll
         const handleScroll = (event) => {
+
+            const scrollY = window.scrollY;
+            console.log(scrollY)
+            // Aici puteți ajusta valorile la care doriți să înceapă și să se oprească modificarea opacității
+            const startScroll = 1500; // Opacitatea începe să crească de la această valoare de derulare
+            const stopScroll = 2100; // Opacitatea se oprește să crească de la această valoare de derulare
+            // Calculăm opacitatea în funcție de poziția de derulare
+            const newOpacity1 = Math.min(1, (scrollY - 1500) / (2100 - 1500));
+            // Actualizăm starea opacității
+            setOpacity1(newOpacity1);
+            const newOpacity2 = Math.min(1, (scrollY - 2300) / (2900 - 2300));
+            // Actualizăm starea opacității
+            setOpacity2(newOpacity2);
+            const newOpacity3 = Math.min(1, (scrollY - 3200) / (3800 - 3200));
+            // Actualizăm starea opacității
+            setOpacity3(newOpacity3);
+            const newOpacity4 = Math.min(1, (scrollY - 4100) / (4700 - 4100));
+            // Actualizăm starea opacității
+            setOpacity4(newOpacity4);
+            const newOpacity5 = Math.min(1, (scrollY - 5000) / (5600 - 5000));
+            // Actualizăm starea opacității
+            setOpacity5(newOpacity5);
+            const newOpacity6 = Math.min(1, (scrollY - 5900) / (6500 - 5900));
+            // Actualizăm starea opacității
+            setOpacity6(newOpacity6);
+
+
             window.requestAnimationFrame(() => {
                 // const scroll = window.scrollY;
                 // console.log(scroll);
@@ -274,7 +307,35 @@ export default function Acasa() {
                             <p>La Midas Group, credem că fiecare afacere merită să aibă un site web care să se ridice la standardele cele mai înalte de calitate și profesionalism. Suntem dedicați să creăm site-uri web personalizate și inovatoare pentru clienții noștri. Indiferent dacă sunteți o afacere mică sau o corporație mare, suntem aici pentru a vă ajuta să vă transformați viziunea în realitate digitală.</p>
                         </div>
                     </div>
-                    <div className='sec-5'>
+                    <div className='sec-6'>
+                        <div className='left'>
+                            <h2>Ce tipuri de website-uri realizăm?</h2>
+                        </div>
+                        <div className='right'>
+                            <div className='card'>
+
+                            </div>
+                            <div className='card' style={{opacity: opacity1}}>
+
+                            </div>
+                            <div className='card' style={{opacity: opacity2}}>
+
+                            </div>
+                            <div className='card' style={{opacity: opacity3}}>
+
+                            </div>
+                            <div className='card' style={{opacity: opacity4}}>
+
+                            </div>
+                            <div className='card' style={{opacity: opacity5}}>
+
+                            </div>
+                            <div className='card' style={{opacity: opacity6}}>
+
+                            </div>
+                        </div>
+                    </div>
+                    {/* <div className='sec-5'>
                         <div className='left-text' id='text'>
                             <h2>Ce tipuri de website-uri realizăm?</h2>
                         </div>
@@ -282,7 +343,7 @@ export default function Acasa() {
                             <div className='multiCards'>
                                 <div className='cardBox' id='card1'>
                                     <div className='card'>
-                                        {/* <div className='top'>
+                                        <div className='top'>
                                             <BiSolidBookContent className='icon' />
                                             <h3>{dataCard[dot - 1].title}</h3>
                                         </div>
@@ -293,12 +354,12 @@ export default function Acasa() {
                                                     <span key={idea}>{idea}</span>
                                                 )
                                             })}
-                                        </div> */}
+                                        </div>
                                     </div>
                                 </div>
                                 <div className='cardBox' id='card2'>
                                     <div className='card'>
-                                        {/* <div className='top'>
+                                        <div className='top'>
                                             <BiSolidBookContent className='icon' />
                                             <h3>{dataCard[dot - 1].title}</h3>
                                         </div>
@@ -309,12 +370,12 @@ export default function Acasa() {
                                                     <span key={idea}>{idea}</span>
                                                 )
                                             })}
-                                        </div> */}
+                                        </div>
                                     </div>
                                 </div>
                                 <div className='cardBox' id='card3'>
                                     <div className='card'>
-                                        {/* <div className='top'>
+                                        <div className='top'>
                                             <BiSolidBookContent className='icon' />
                                             <h3>{dataCard[dot - 1].title}</h3>
                                         </div>
@@ -325,12 +386,12 @@ export default function Acasa() {
                                                     <span key={idea}>{idea}</span>
                                                 )
                                             })}
-                                        </div> */}
+                                        </div>
                                     </div>
                                 </div>
                                 <div className='cardBox' id='card4'>
                                     <div className='card'>
-                                        {/* <div className='top'>
+                                        <div className='top'>
                                             <BiSolidBookContent className='icon' />
                                             <h3>{dataCard[dot - 1].title}</h3>
                                         </div>
@@ -341,12 +402,12 @@ export default function Acasa() {
                                                     <span key={idea}>{idea}</span>
                                                 )
                                             })}
-                                        </div> */}
+                                        </div>
                                     </div>
                                 </div>
                                 <div className='cardBox' id='card5'>
                                     <div className='card'>
-                                        {/* <div className='top'>
+                                        <div className='top'>
                                             <BiSolidBookContent className='icon' />
                                             <h3>{dataCard[dot - 1].title}</h3>
                                         </div>
@@ -357,12 +418,12 @@ export default function Acasa() {
                                                     <span key={idea}>{idea}</span>
                                                 )
                                             })}
-                                        </div> */}
+                                        </div>
                                     </div>
                                 </div>
                                 <div className='cardBox' id='card6'>
                                     <div className='card'>
-                                        {/* <div className='top'>
+                                        <div className='top'>
                                             <BiSolidBookContent className='icon' />
                                             <h3>{dataCard[dot - 1].title}</h3>
                                         </div>
@@ -373,12 +434,12 @@ export default function Acasa() {
                                                     <span key={idea}>{idea}</span>
                                                 )
                                             })}
-                                        </div> */}
+                                        </div>
                                     </div>
                                 </div>
                                 <div className='cardBox' id='card7'>
                                     <div className='card'>
-                                        {/* <div className='top'>
+                                        <div className='top'>
                                             <BiSolidBookContent className='icon' />
                                             <h3>{dataCard[dot - 1].title}</h3>
                                         </div>
@@ -389,7 +450,7 @@ export default function Acasa() {
                                                     <span key={idea}>{idea}</span>
                                                 )
                                             })}
-                                        </div> */}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -409,7 +470,7 @@ export default function Acasa() {
                     </div>
                     <div id='test'>
                         <p>gfdgsfdhgsfdghsgfdhsgfhh</p>
-                    </div>
+                    </div> */}
                     <div className='sec-4'>
                         <div className='left-text'>
                             <h2>Ce tipuri de website-uri realizăm?</h2>

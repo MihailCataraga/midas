@@ -495,7 +495,7 @@
                 position: relative;
                 .left-text {
                     flex: 1;
-
+                    
                     h2 {
                         max-width: 550px;
                         font-size: 48px;
@@ -639,6 +639,64 @@
                         .active {
                             background-color: rgb(66, 0, 128);
                         }
+                    }
+                }
+            }
+            .sec-6{
+                display: flex;
+                justify-content: space-around;
+                .left{
+                    flex: 1;
+                    h2{
+                        font-size: 48px;
+                        color: white;
+                        position: sticky;
+                        top: 350px;
+                        margin-bottom: 400px;
+                    }
+                }
+                .right{
+                    flex: 1.25;
+                    .card{
+                        width: 800px;
+                        height: 400px;
+                        margin-bottom: 50vh;
+                        position: sticky;
+                        border: 1px solid white;
+                    }
+                    .card:nth-child(1) {
+                        top: 220px;
+                        background-color: red;
+                    }
+                    .card:nth-child(2) {
+                        top: 240px;
+                        opacity: 0;
+                        background-color: green;
+                    }
+                    .card:nth-child(3) {
+                        top: 260px;
+                        opacity: 0;
+                        background-color: blue;
+                    }
+                    .card:nth-child(4) {
+                        top: 280px;
+                        opacity: 0;
+                        background-color: rosybrown;
+                    }
+                    .card:nth-child(5) {
+                        top: 300px;
+                        opacity: 0;
+                        background-color: orange;
+                    }
+                    .card:nth-child(6) {
+                        top: 320px;
+                        opacity: 0;
+                        background-color: purple;
+                    }
+                    .card:nth-child(7) {
+                        top: 240px;
+                        opacity: 0;
+                        background-color: goldenrod;
                     }
                 }
             }
