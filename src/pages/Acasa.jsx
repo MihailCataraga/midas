@@ -37,12 +37,150 @@ export default function Acasa() {
             }, 150); // Delay-ul de 50 de milisecunde
         };
 
+        //Scroll
+        const handleScroll = (event) => {
+            window.requestAnimationFrame(() => {
+                // const scroll = window.scrollY;
+                // console.log(scroll);
+
+                const test = document.getElementById('test');
+                if (window.scrollY >= 1299) {
+                    // elem.style.position = "fixed";
+                    const top = window.scrollY - 1370 + 200
+                    test.style.paddingTop = (window.scrollY - 1350 + 200) + 'px';
+                }
+                if (window.scrollY >= 3099) {
+                    // elem.style.position = "fixed";
+                    const top = 3100 - 1350 + 200
+                    test.style.paddingTop = (3100 - 1350 + 200) + 'px';
+
+                    // card.style.paddingBottom = top * 2 + 'px';
+                }
+                const text = document.getElementById('text');
+                if (window.scrollY >= 1299) {
+                    // elem.style.position = "fixed";
+                    const top = window.scrollY - 1350
+                    text.style.paddingTop = (window.scrollY - 1350) * 2 + 'px';
+                }
+                if (window.scrollY >= 3099) {
+                    // elem.style.position = "fixed";
+                    text.style.paddingTop = (3100 - 1350) * 2 + 'px';
+                    // card.style.paddingBottom = top * 2 + 'px';
+                }
+                const card = document.getElementById('card');
+                if (window.scrollY >= 1299) {
+                    // elem.style.position = "fixed";
+                    // const top = window.scrollY - 1350
+                    card.style.paddingTop = (window.scrollY - 1350) * 2 + 'px';
+                    // card.style.paddingBottom = top * 2 + 'px';
+                }
+                if (window.scrollY >= 3100) {
+                    // elem.style.position = "fixed";
+                    // const top = 3100 - 1350
+                    card.style.paddingTop = (3100 - 1350) * 2 + 'px';
+                    // card.style.paddingBottom = top * 2 + 'px';
+                }
+                const card2 = document.getElementById('card2');
+                if (window.scrollY >= 1599) {
+                    // elem.style.position = "fixed";
+                    card2.style.display = 'initial'
+                    card2.style.animation = 'card2-1 0.5s ease-in-out'
+
+                }
+                if (window.scrollY < 1599) {
+                    // elem.style.position = "fixed";
+                    card2.style.animation = 'card2-2 0.5s ease-in-out'
+                    setTimeout(() => {
+                        card2.style.display = 'none'
+                    }, 400)
+
+                }
+                const card3 = document.getElementById('card3');
+                if (window.scrollY >= 1899) {
+                    // elem.style.position = "fixed";
+                    card3.style.display = 'initial'
+                    card3.style.animation = 'card3-1 0.5s ease-in-out'
+
+                }
+                if (window.scrollY < 1899) {
+                    // elem.style.position = "fixed";
+                    card3.style.animation = 'card3-2 0.5s ease-in-out'
+                    setTimeout(() => {
+                        card3.style.display = 'none'
+                    }, 400)
+
+                }
+                const card4 = document.getElementById('card4');
+                if (window.scrollY >= 2199) {
+                    // elem.style.position = "fixed";
+                    card4.style.display = 'initial'
+                    card4.style.animation = 'card4-1 0.5s ease-in-out'
+
+                }
+                if (window.scrollY < 2199) {
+                    // elem.style.position = "fixed";
+                    card4.style.animation = 'card4-2 0.5s ease-in-out'
+                    setTimeout(() => {
+                        card4.style.display = 'none'
+                    }, 400)
+
+                }
+                const card5 = document.getElementById('card5');
+                if (window.scrollY >= 2499) {
+                    // elem.style.position = "fixed";
+                    card5.style.display = 'initial'
+                    card5.style.animation = 'card5-1 0.5s ease-in-out'
+
+                }
+                if (window.scrollY < 2499) {
+                    // elem.style.position = "fixed";
+                    card5.style.animation = 'card5-2 0.5s ease-in-out'
+                    setTimeout(() => {
+                        card5.style.display = 'none'
+                    }, 400)
+
+                }
+                const card6 = document.getElementById('card6');
+                if (window.scrollY >= 2799) {
+                    // elem.style.position = "fixed";
+                    card6.style.display = 'initial'
+                    card6.style.animation = 'card6-1 0.5s ease-in-out'
+
+                }
+                if (window.scrollY < 2799) {
+                    // elem.style.position = "fixed";
+                    card6.style.animation = 'card6-2 0.5s ease-in-out'
+                    setTimeout(() => {
+                        card6.style.display = 'none'
+                    }, 400)
+
+                }
+                const card7 = document.getElementById('card7');
+                if (window.scrollY >= 3099) {
+                    // elem.style.position = "fixed";
+                    card7.style.display = 'initial'
+                    card7.style.animation = 'card7-1 0.5s ease-in-out'
+
+                }
+                if (window.scrollY < 3099) {
+                    // elem.style.position = "fixed";
+                    card7.style.animation = 'card7-2 0.5s ease-in-out'
+                    setTimeout(() => {
+                        card7.style.display = 'none'
+                    }, 400)
+
+                }
+            })
+        }
+
         // Atașăm evenimentul de mișcare a cursorului la document
         document.addEventListener('mousemove', handleMouseMove);
+        document.addEventListener('scroll', handleScroll);
 
         // Curățăm evenimentele atașate când componenta este dezmontată
         return () => {
             document.removeEventListener('mousemove', handleMouseMove);
+            document.removeEventListener('scroll', handleScroll);
             clearInterval(interval);
         };
     }, []);
@@ -136,6 +274,142 @@ export default function Acasa() {
                             <p>La Midas Group, credem că fiecare afacere merită să aibă un site web care să se ridice la standardele cele mai înalte de calitate și profesionalism. Suntem dedicați să creăm site-uri web personalizate și inovatoare pentru clienții noștri. Indiferent dacă sunteți o afacere mică sau o corporație mare, suntem aici pentru a vă ajuta să vă transformați viziunea în realitate digitală.</p>
                         </div>
                     </div>
+                    <div className='sec-5'>
+                        <div className='left-text' id='text'>
+                            <h2>Ce tipuri de website-uri realizăm?</h2>
+                        </div>
+                        <div className='rightCol' id='card'>
+                            <div className='multiCards'>
+                                <div className='cardBox' id='card1'>
+                                    <div className='card'>
+                                        {/* <div className='top'>
+                                            <BiSolidBookContent className='icon' />
+                                            <h3>{dataCard[dot - 1].title}</h3>
+                                        </div>
+                                        <p className='text'>{dataCard[dot - 1].text}</p>
+                                        <div className='ideas'>
+                                            {dataCard[dot - 1].ideas.map((idea) => {
+                                                return (
+                                                    <span key={idea}>{idea}</span>
+                                                )
+                                            })}
+                                        </div> */}
+                                    </div>
+                                </div>
+                                <div className='cardBox' id='card2'>
+                                    <div className='card'>
+                                        {/* <div className='top'>
+                                            <BiSolidBookContent className='icon' />
+                                            <h3>{dataCard[dot - 1].title}</h3>
+                                        </div>
+                                        <p className='text'>{dataCard[dot - 1].text}</p>
+                                        <div className='ideas'>
+                                            {dataCard[dot - 1].ideas.map((idea) => {
+                                                return (
+                                                    <span key={idea}>{idea}</span>
+                                                )
+                                            })}
+                                        </div> */}
+                                    </div>
+                                </div>
+                                <div className='cardBox' id='card3'>
+                                    <div className='card'>
+                                        {/* <div className='top'>
+                                            <BiSolidBookContent className='icon' />
+                                            <h3>{dataCard[dot - 1].title}</h3>
+                                        </div>
+                                        <p className='text'>{dataCard[dot - 1].text}</p>
+                                        <div className='ideas'>
+                                            {dataCard[dot - 1].ideas.map((idea) => {
+                                                return (
+                                                    <span key={idea}>{idea}</span>
+                                                )
+                                            })}
+                                        </div> */}
+                                    </div>
+                                </div>
+                                <div className='cardBox' id='card4'>
+                                    <div className='card'>
+                                        {/* <div className='top'>
+                                            <BiSolidBookContent className='icon' />
+                                            <h3>{dataCard[dot - 1].title}</h3>
+                                        </div>
+                                        <p className='text'>{dataCard[dot - 1].text}</p>
+                                        <div className='ideas'>
+                                            {dataCard[dot - 1].ideas.map((idea) => {
+                                                return (
+                                                    <span key={idea}>{idea}</span>
+                                                )
+                                            })}
+                                        </div> */}
+                                    </div>
+                                </div>
+                                <div className='cardBox' id='card5'>
+                                    <div className='card'>
+                                        {/* <div className='top'>
+                                            <BiSolidBookContent className='icon' />
+                                            <h3>{dataCard[dot - 1].title}</h3>
+                                        </div>
+                                        <p className='text'>{dataCard[dot - 1].text}</p>
+                                        <div className='ideas'>
+                                            {dataCard[dot - 1].ideas.map((idea) => {
+                                                return (
+                                                    <span key={idea}>{idea}</span>
+                                                )
+                                            })}
+                                        </div> */}
+                                    </div>
+                                </div>
+                                <div className='cardBox' id='card6'>
+                                    <div className='card'>
+                                        {/* <div className='top'>
+                                            <BiSolidBookContent className='icon' />
+                                            <h3>{dataCard[dot - 1].title}</h3>
+                                        </div>
+                                        <p className='text'>{dataCard[dot - 1].text}</p>
+                                        <div className='ideas'>
+                                            {dataCard[dot - 1].ideas.map((idea) => {
+                                                return (
+                                                    <span key={idea}>{idea}</span>
+                                                )
+                                            })}
+                                        </div> */}
+                                    </div>
+                                </div>
+                                <div className='cardBox' id='card7'>
+                                    <div className='card'>
+                                        {/* <div className='top'>
+                                            <BiSolidBookContent className='icon' />
+                                            <h3>{dataCard[dot - 1].title}</h3>
+                                        </div>
+                                        <p className='text'>{dataCard[dot - 1].text}</p>
+                                        <div className='ideas'>
+                                            {dataCard[dot - 1].ideas.map((idea) => {
+                                                return (
+                                                    <span key={idea}>{idea}</span>
+                                                )
+                                            })}
+                                        </div> */}
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='cardDot'>
+                                {dataCard.map((item) => {
+                                    return (
+                                        <div
+                                            className={dot === item.id ? 'dot active' : 'dot'}
+                                            key={item.id}
+                                            onClick={() => setDot(item.id)}
+                                        >
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                    <div id='test'>
+                        <p>gfdgsfdhgsfdghsgfdhsgfhh</p>
+                    </div>
                     <div className='sec-4'>
                         <div className='left-text'>
                             <h2>Ce tipuri de website-uri realizăm?</h2>
@@ -163,7 +437,7 @@ export default function Acasa() {
                                         <div
                                             className={dot === item.id ? 'dot active' : 'dot'}
                                             key={item.id}
-                                            onClick={() => {setDot(item.id); click()}}
+                                            onClick={() => { setDot(item.id); click() }}
                                         >
                                         </div>
                                     )
