@@ -1,2 +1,15 @@
-5 => 27.7
-1 => 5.5
+opacitatea in sec-3 Home page trebuie recalculata dupa ce este stabilit ultima versiune de content
+
+
+
+1. HTML5;
+2. CSS3;
+3. Sass;
+4. JavaScript;
+5. React;
+6. Redux;
+7. Node.js;
+8. Express.js;
+9. MongoDB;
+10. Sql;
+11. SqLite;

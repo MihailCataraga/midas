@@ -11,13 +11,7 @@
     }
 
     .acasa {
-
-        // background-color: rgba(0, 0, 0, 0.1);
-        // backdrop-filter: blur(50px);
-        // -webkit-backdrop-filter: blur(50px);
         main {
-
-            // background-color: #bd67f7;
             .sec-1 {
                 display: flex;
                 align-items: center;
@@ -286,790 +280,284 @@
                     }
                 }
             }
-
-            .sec-3 {
-                height: 500px;
-                display: flex;
-                align-items: center;
-                padding: 0 1.5vw 0 5vw;
-                margin: 50px 0;
-                .left-text {
-                    flex: 1;
-
-                    h2 {
-                        max-width: 550px;
-                        font-size: 48px;
-                        font-weight: 400;
-                        color: white;
-                    }
-                }
-
-                .rightCol {
-                    flex: 1.25;
-                    display: flex;
-                    align-items: center;
-
-                    .cardBox {
-                        background-image: url('../assets/imgs/backgroundCard.png');
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        padding: 50px 70px;
-                        margin: 20px;
-                        border-radius: 30px;
-                        border: 1px solid white;
-                        color: white;
-                        animation: card 10s linear infinite;
-
-                        .card {
-                            height: 400px;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-around;
-                            animation: text 10s linear infinite;
-
-                            .top {
-                                display: flex;
-                                align-items: center;
-                                margin-bottom: 40px;
-
-                                .icon {
-                                    font-size: 36px;
-                                    margin-right: 10px;
-                                }
-
-                                h3 {
-                                    font-size: 36px;
-                                }
-                            }
-
-                            p {
-                                font-size: 24px;
-                                line-height: 1.5;
-                            }
-
-                            .ideas {
-                                display: flex;
-                                flex-wrap: wrap;
-                                align-items: center;
-                                gap: 20px;
-                                margin-top: 30px;
-
-                                span {
-                                    font-size: 22px;
-                                    border: 1px solid white;
-                                    padding: 5px 16px;
-                                    border-radius: 20px;
-                                }
-                            }
-                        }
-                    }
-
-                    .cardDot {
-                        margin-left: 10px;
-
-                        .dot {
-                            width: 15px;
-                            height: 15px;
-                            background-color: white;
-                            border-radius: 50%;
-                            border: 1px solid white;
-                            margin: 10px;
-                        }
-
-                        .dot:hover {
-                            background-color: rgb(66, 0, 128);
-                        }
-
-                        .active {
-                            background-color: rgb(66, 0, 128);
-                        }
-                    }
-                }
-            }
-
-            .sec-4 {
-                height: 500px;
-                display: flex;
-                align-items: center;
-                padding: 0 1.5vw 0 5vw;
-                margin: 50px 0;
-                .left-text {
-                    flex: 1;
-
-                    h2 {
-                        max-width: 550px;
-                        font-size: 48px;
-                        font-weight: 400;
-                        color: white;
-                    }
-                }
-
-                .rightCol {
-                    flex: 1.25;
-                    display: flex;
-                    align-items: center;
-                    .cardBox {
-                        background-image: url('../assets/imgs/backgroundCard.png');
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        padding: 50px 70px;
-                        margin: 20px;
-                        border-radius: 30px;
-                        border: 1px solid white;
-                        color: white;
-                        animation: display 10s linear infinite;
-
-                        .card {
-                            height: 400px;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-around;
-                            // animation: text 10s linear infinite;
-
-                            .top {
-                                display: flex;
-                                align-items: center;
-                                margin-bottom: 40px;
-
-                                .icon {
-                                    font-size: 36px;
-                                    margin-right: 10px;
-                                }
-
-                                h3 {
-                                    font-size: 36px;
-                                }
-                            }
-
-                            p {
-                                font-size: 24px;
-                                line-height: 1.5;
-                            }
-
-                            .ideas {
-                                display: flex;
-                                flex-wrap: wrap;
-                                align-items: center;
-                                gap: 20px;
-                                margin-top: 30px;
-
-                                span {
-                                    font-size: 22px;
-                                    border: 1px solid white;
-                                    padding: 5px 16px;
-                                    border-radius: 20px;
-                                }
-                            }
-                        }
-                    }
-
-                    .cardDot {
-                        margin-left: 10px;
-
-                        .dot {
-                            width: 15px;
-                            height: 15px;
-                            background-color: white;
-                            border-radius: 50%;
-                            border: 1px solid white;
-                            margin: 10px;
-                        }
-
-                        .dot:hover {
-                            background-color: rgb(66, 0, 128);
-                        }
-
-                        .active {
-                            background-color: rgb(66, 0, 128);
-                        }
-                    }
-                }
-            }
-            .sec-5 {
-                height: 500px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 0 1.5vw 100px 5vw;
-                margin: 50px 0;
-                position: relative;
-                .left-text {
-                    flex: 1;
-                    
-                    h2 {
-                        max-width: 550px;
-                        font-size: 48px;
-                        font-weight: 400;
-                        color: white;
-                    }
-                }
-
-                .rightCol {
-                    flex: 1.25;
-                    display: flex;
-                    align-items: center;
-                    z-index: 2;
-                    justify-content: end;
-                    .multiCards{
-                        position: relative;
-                        .cardBox {
-                            background-image: url('../assets/imgs/backgroundCard.png');
-                            background-repeat: no-repeat;
-                            background-size: cover;
-                            padding: 50px 70px;
-                            margin: 20px;
-                            border-radius: 30px;
-                            border: 1px solid white;
-                            color: white;
-                            // animation: display 10s linear infinite;
-    
-                            .card {
-                                height: 400px;
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: space-around;
-                                // animation: text 10s linear infinite;
-    
-                                // .top {
-                                //     display: flex;
-                                //     align-items: center;
-                                //     margin-bottom: 40px;
-    
-                                //     .icon {
-                                //         font-size: 36px;
-                                //         margin-right: 10px;
-                                //     }
-    
-                                //     h3 {
-                                //         font-size: 36px;
-                                //     }
-                                // }
-    
-                                // p {
-                                //     font-size: 24px;
-                                //     line-height: 1.5;
-                                // }
-    
-                                // .ideas {
-                                //     display: flex;
-                                //     flex-wrap: wrap;
-                                //     align-items: center;
-                                //     gap: 20px;
-                                //     margin-top: 30px;
-    
-                                //     span {
-                                //         font-size: 22px;
-                                //         border: 1px solid white;
-                                //         padding: 5px 16px;
-                                //         border-radius: 20px;
-                                //     }
-                                // }
-                            }
-                        }
-                        #card1{
-                            position: absolute;
-                            width: 600px;
-                            top: -300px;
-                            right: 100px;
-                        }
-                        #card2{
-                            display: none;
-                            position: absolute;
-                            width: 600px;
-                            top: -280px;
-                            right: 100px;
-                            transition: 1s ease-in-out;
-                        }
-                        #card3{
-                            display: none;
-                            position: absolute;
-                            width: 600px;
-                            top: -260px;
-                            right: 100px;
-                            transition: 1s ease-in-out;
-                        }
-                        #card4{
-                            display: none;
-                            position: absolute;
-                            width: 600px;
-                            top: -240px;
-                            right: 100px;
-                            transition: 1s ease-in-out;
-                        }
-                        #card5{
-                            display: none;
-                            position: absolute;
-                            width: 600px;
-                            top: -220px;
-                            right: 100px;
-                            transition: 1s ease-in-out;
-                        }
-                        #card6{
-                            display: none;
-                            position: absolute;
-                            width: 600px;
-                            top: -200px;
-                            right: 100px;
-                            transition: 1s ease-in-out;
-                        }
-                        #card7{
-                            display: none;
-                            position: absolute;
-                            width: 600px;
-                            top: -180px;
-                            right: 100px;
-                            transition: 1s ease-in-out;
-                        }
-                    }
-
-                    .cardDot {
-                        .dot {
-                            width: 15px;
-                            height: 15px;
-                            background-color: white;
-                            border-radius: 50%;
-                            border: 1px solid white;
-                            margin: 10px;
-                        }
-
-                        .dot:hover {
-                            background-color: rgb(66, 0, 128);
-                        }
-
-                        .active {
-                            background-color: rgb(66, 0, 128);
-                        }
-                    }
-                }
-            }
-            .sec-6{
+            .sec-3{
                 display: flex;
                 justify-content: space-around;
+                margin-top: 50px;
+                gap: 50px;
                 .left{
                     flex: 1;
                     h2{
-                        font-size: 48px;
+                        font-size: 40px;
+                        text-align: center;
                         color: white;
                         position: sticky;
                         top: 350px;
-                        margin-bottom: 400px;
+                        margin-bottom: 800px;
+                        margin-top: 150px;
                     }
                 }
                 .right{
-                    flex: 1.25;
-                    .card{
-                        width: 800px;
-                        height: 400px;
-                        margin-bottom: 50vh;
+                    flex: 1.15;
+                    .cards{
                         position: sticky;
-                        border: 1px solid white;
-                    }
-                    .card:nth-child(1) {
-                        top: 220px;
-                        background-color: red;
-                    }
-                    .card:nth-child(2) {
-                        top: 240px;
-                        opacity: 0;
-                        background-color: green;
-                    }
-                    .card:nth-child(3) {
-                        top: 260px;
-                        opacity: 0;
-                        background-color: blue;
-                    }
-                    .card:nth-child(4) {
-                        top: 280px;
-                        opacity: 0;
-                        background-color: rosybrown;
-                    }
-                    .card:nth-child(5) {
-                        top: 300px;
-                        opacity: 0;
-                        background-color: orange;
-                    }
-                    .card:nth-child(6) {
-                        top: 320px;
-                        opacity: 0;
-                        background-color: purple;
-                    }
-                    .card:nth-child(7) {
-                        top: 240px;
-                        opacity: 0;
-                        background-color: goldenrod;
+                        top: 200px;
+                        padding-bottom: 100px;
+                        .card{
+                            width: 800px;
+                            height: 400px;
+                            margin-bottom: 50vh;
+                            position: sticky;
+                            top: 200px;
+                            padding: 30px 50px;
+                            border: 1px solid white;
+                            border-radius: 25px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            background-image: url('../assets/imgs/backgroundCard.png');
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            h3{
+                                display: flex;
+                                align-items: center;
+                                font-size: 36px;
+                                color: white;
+                                .icon{
+                                    margin-right: 10px;
+                                }
+                            }
+                            p{
+                                font-size: 24px;
+                                line-height: 1.5;
+                                color: white;
+                            }
+                            .ideas{
+                                display: flex;
+                                align-items: center;
+                                flex-wrap: wrap;
+                                color: white;
+                                span{
+                                    font-size: 20px;
+                                    border: 1px solid white;
+                                    padding: 8px 15px;
+                                    border-radius: 25px;
+                                    margin: 10px;
+                                }
+                            }
+                        }
+                        .card:nth-child(1) {
+                            top: 220px;
+                        }
+                        .card:nth-child(2) {
+                            top: 240px;
+                            opacity: 0;
+                        }
+                        .card:nth-child(3) {
+                            top: 260px;
+                            opacity: 0;
+                        }
+                        .card:nth-child(4) {
+                            top: 280px;
+                            opacity: 0;
+                        }
+                        .card:nth-child(5) {
+                            top: 300px;
+                            opacity: 0;
+                        }
+                        .card:nth-child(6) {
+                            top: 320px;
+                            opacity: 0;
+                        }
+                        .card:nth-child(7) {
+                            top: 340px;
+                            opacity: 0;
+                        }
                     }
                 }
+            }
+            .sec-4{
+                height: 1000px;
+                background-color: red;
+                margin-top: -400px;
             }
         }
     }
 }
 
-    @keyframes img1 {
-        0% {
-            transform: translateX(0px);
-            width: 300px;
-            z-index: 100;
-            top: -75px;
-        }
-
-        27.7% {
-            transform: translateX(0px);
-            width: 300px;
-            z-index: 100;
-            top: -75px;
-        }
-
-        27.8% {
-            z-index: 99;
-        }
-
-        33.2% {
-            transform: translateX(-175px);
-            width: 250px;
-            top: -300px;
-            z-index: 99;
-        }
-
-        60.9% {
-            transform: translateX(-175px);
-            width: 250px;
-            top: -300px;
-            z-index: 98;
-        }
-
-        66.4% {
-            transform: translateX(175px);
-            width: 250px;
-            top: -225px;
-            z-index: 98;
-        }
-
-        94.1% {
-            transform: translateX(175px);
-            width: 250px;
-            top: -225px;
-            z-index: 99;
-        }
-
-        94.2% {
-            z-index: 100;
-        }
-
-        100% {
-            transform: translateX(0px);
-            width: 300px;
-            z-index: 100;
-            top: -75px;
-        }
+@keyframes img1 {
+    0% {
+        transform: translateX(0px);
+        width: 300px;
+        z-index: 100;
+        top: -75px;
     }
 
-    @keyframes img2 {
-        0% {
-            transform: translateX(-175px);
-            width: 250px;
-            top: -300px;
-            z-index: 99;
-        }
-
-        27.7% {
-            transform: translateX(-175px);
-            width: 250px;
-            top: -300px;
-            z-index: 98;
-        }
-
-        33.2% {
-            transform: translateX(175px);
-            width: 250px;
-            top: -225px;
-            z-index: 98;
-        }
-
-        60.9% {
-            transform: translateX(175px);
-            width: 250px;
-            top: -225px;
-            z-index: 99;
-        }
-
-        61% {
-            z-index: 100;
-        }
-
-        66.4% {
-            transform: translateX(0px);
-            width: 300px;
-            z-index: 100;
-            top: -75px;
-        }
-
-        94.1% {
-            transform: translateX(0px);
-            width: 300px;
-            z-index: 100;
-            top: -75px;
-        }
-
-        94.2% {
-            z-index: 99;
-        }
-
-        100% {
-            transform: translateX(-175px);
-            width: 250px;
-            top: -300px;
-            z-index: 99;
-        }
+    27.7% {
+        transform: translateX(0px);
+        width: 300px;
+        z-index: 100;
+        top: -75px;
     }
 
-    @keyframes img3 {
-        0% {
-            transform: translateX(175px);
-            width: 250px;
-            top: -225px;
-            z-index: 98;
-        }
-
-        27.7% {
-            transform: translateX(175px);
-            width: 250px;
-            top: -225px;
-            z-index: 99;
-        }
-
-        27.8% {
-            z-index: 100;
-        }
-
-        33.2% {
-            transform: translateX(0px);
-            width: 300px;
-            z-index: 100;
-            top: -75px;
-        }
-
-        60.9% {
-            transform: translateX(0px);
-            width: 300px;
-            z-index: 100;
-            top: -75px;
-        }
-
-        61% {
-            z-index: 99;
-        }
-
-        66.4% {
-            transform: translateX(-175px);
-            width: 250px;
-            top: -300px;
-            z-index: 99;
-        }
-
-        94.1% {
-            transform: translateX(-175px);
-            width: 250px;
-            top: -300px;
-            z-index: 98;
-        }
-
-        100% {
-            transform: translateX(175px);
-            width: 250px;
-            top: -225px;
-            z-index: 98;
-        }
+    27.8% {
+        z-index: 99;
     }
 
-    @keyframes card {
-        0% {
-            transform: rotateX(90deg);
-        }
-
-        5% {
-            transform: scale(1);
-        }
-
-        95% {
-            transform: scale(1);
-        }
-
-        100% {
-            transform: rotateX(90deg);
-        }
+    33.2% {
+        transform: translateX(-175px);
+        width: 250px;
+        top: -300px;
+        z-index: 99;
     }
 
-    @keyframes text {
-        0% {
-            transform: rotateX(-90deg);
-        }
-
-        5% {
-            transform: rotateX(0deg);
-        }
-
-        95% {
-            transform: rotateX(0deg);
-        }
-
-        100% {
-            transform: rotateX(-90deg);
-
-        }
+    60.9% {
+        transform: translateX(-175px);
+        width: 250px;
+        top: -300px;
+        z-index: 98;
     }
 
-    @keyframes display {
-        0% {
-          transform: translateY(200px);
-          opacity: 0;
-        }
-        5% {
-          transform: translateX(0);
-          opacity: 1;
-        }
-        89% {
-          transform: translateY(0);
-          opacity: 1;
-        }
-        95% {
-          transform: translateY(0);
-          opacity: 1;
-        }
-        100% {
-          transform: translateY(-200px);
-          opacity: 0;
-        }
-      }
-
-@keyframes card2-1 {
-    from {
-        top: 400px;
-        opacity: 0%;
+    66.4% {
+        transform: translateX(175px);
+        width: 250px;
+        top: -225px;
+        z-index: 98;
     }
-    to {
-        top: -280px;
-        opacity: 100%;
+
+    94.1% {
+        transform: translateX(175px);
+        width: 250px;
+        top: -225px;
+        z-index: 99;
+    }
+
+    94.2% {
+        z-index: 100;
+    }
+
+    100% {
+        transform: translateX(0px);
+        width: 300px;
+        z-index: 100;
+        top: -75px;
     }
 }
 
-@keyframes card2-2 {
-    from {
-        top: -280px;
-        opacity: 100%;
+@keyframes img2 {
+    0% {
+        transform: translateX(-175px);
+        width: 250px;
+        top: -300px;
+        z-index: 99;
     }
-    to {
-        top: 400px;
-        opacity: 0%;
-        display: none;
+
+    27.7% {
+        transform: translateX(-175px);
+        width: 250px;
+        top: -300px;
+        z-index: 98;
     }
-}
-@keyframes card3-1 {
-    from {
-        top: 400px;
-        opacity: 0%;
+
+    33.2% {
+        transform: translateX(175px);
+        width: 250px;
+        top: -225px;
+        z-index: 98;
     }
-    to {
-        top: -260px;
-        opacity: 100%;
+
+    60.9% {
+        transform: translateX(175px);
+        width: 250px;
+        top: -225px;
+        z-index: 99;
+    }
+
+    61% {
+        z-index: 100;
+    }
+
+    66.4% {
+        transform: translateX(0px);
+        width: 300px;
+        z-index: 100;
+        top: -75px;
+    }
+
+    94.1% {
+        transform: translateX(0px);
+        width: 300px;
+        z-index: 100;
+        top: -75px;
+    }
+
+    94.2% {
+        z-index: 99;
+    }
+
+    100% {
+        transform: translateX(-175px);
+        width: 250px;
+        top: -300px;
+        z-index: 99;
     }
 }
 
-@keyframes card3-2 {
-    from {
-        top: -260px;
-        opacity: 100%;
+@keyframes img3 {
+    0% {
+        transform: translateX(175px);
+        width: 250px;
+        top: -225px;
+        z-index: 98;
     }
-    to {
-        top: 400px;
-        opacity: 0%;
-        display: none;
-    }
-}
-@keyframes card4-1 {
-    from {
-        top: 400px;
-        opacity: 0%;
-    }
-    to {
-        top: -240px;
-        opacity: 100%;
-    }
-}
 
-@keyframes card4-2 {
-    from {
-        top: -240px;
-        opacity: 100%;
+    27.7% {
+        transform: translateX(175px);
+        width: 250px;
+        top: -225px;
+        z-index: 99;
     }
-    to {
-        top: 400px;
-        opacity: 0%;
-        display: none;
-    }
-}
-@keyframes card5-1 {
-    from {
-        top: 400px;
-        opacity: 0%;
-    }
-    to {
-        top: -220px;
-        opacity: 100%;
-    }
-}
 
-@keyframes card5-2 {
-    from {
-        top: -220px;
-        opacity: 100%;
+    27.8% {
+        z-index: 100;
     }
-    to {
-        top: 400px;
-        opacity: 0%;
-        display: none;
-    }
-}
-@keyframes card6-1 {
-    from {
-        top: 400px;
-        opacity: 0%;
-    }
-    to {
-        top: -200px;
-        opacity: 100%;
-    }
-}
 
-@keyframes card6-2 {
-    from {
-        top: -200px;
-        opacity: 100%;
+    33.2% {
+        transform: translateX(0px);
+        width: 300px;
+        z-index: 100;
+        top: -75px;
     }
-    to {
-        top: 400px;
-        opacity: 0%;
-        display: none;
-    }
-}
-@keyframes card7-1 {
-    from {
-        top: 400px;
-        opacity: 0%;
-    }
-    to {
-        top: -180px;
-        opacity: 100%;
-    }
-}
 
-@keyframes card7-2 {
-    from {
-        top: -180px;
-        opacity: 100%;
+    60.9% {
+        transform: translateX(0px);
+        width: 300px;
+        z-index: 100;
+        top: -75px;
     }
-    to {
-        top: 400px;
-        opacity: 0%;
-        display: none;
+
+    61% {
+        z-index: 99;
+    }
+
+    66.4% {
+        transform: translateX(-175px);
+        width: 250px;
+        top: -300px;
+        z-index: 99;
+    }
+
+    94.1% {
+        transform: translateX(-175px);
+        width: 250px;
+        top: -300px;
+        z-index: 98;
+    }
+
+    100% {
+        transform: translateX(175px);
+        width: 250px;
+        top: -225px;
+        z-index: 98;
     }
 }
