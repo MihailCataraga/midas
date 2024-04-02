@@ -299,6 +299,8 @@
                 }
                 .right{
                     flex: 1.15;
+                    display: flex;
+                    position: relative;
                     .cards{
                         position: sticky;
                         top: 200px;
@@ -376,13 +378,109 @@
                     }
                 }
             }
-            .sec-4{
-                height: 1000px;
-                background-color: red;
+            h2{
                 margin-top: -400px;
+                text-align: center;
+                font-size: 40px;
+                color: white;
+                margin-bottom: 20px;
+            }
+            .sec-4{
+                background-color: transparent;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background: radial-gradient(circle, rgba(213,13,226,1) 0%, rgba(145,17,230,1) 100%);
+                .carouselBox{
+                    height: 196px;
+                    background-color: #200d38;
+                    position: relative;
+                    .left{
+                        position: absolute;
+                        background: linear-gradient(90deg, rgba(32,13,56,1) 0%, rgba(32,13,56,0) 100%);
+                        height: 200px;
+                        width: 200px;
+                        top: -2px;
+                        left: 0;
+                        z-index: 2;
+                    }
+                    .right{
+                        position: absolute;
+                        background: linear-gradient(90deg, rgba(32,13,56,0) 0%, rgba(32,13,56,1) 100%);
+                        height: 200px;
+                        width: 200px;
+                        top: -2px;
+                        right: 0;
+                        z-index: 2;
+                    }
+                    .carousel{
+                        display: flex;
+                        height: 196px;
+                        background-color: transparent;
+                        justify-content: space-between;
+                        align-items: center;
+                        list-style-type: none;
+                        overflow-x: hidden;
+                        width: calc(300px * 16);
+                        animation: scrolling 30s linear infinite;
+                        li{
+                            width: 300px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            flex-shrink: 0;
+                            .icon{
+                                font-size: 56px;
+                            }
+                            span{
+                                font-size: 24px;
+                                color: white;
+                                margin-top: 5px;
+                            }
+                        }
+                        #html{
+                            color: #E14E1D;
+                        }
+                        #css{
+                            color: #0277BD;
+                        }
+                        #sass{
+                            color: #CD6799;
+                        }
+                        #js{
+                            color: #F0DB4F;
+                        }
+                        #react{
+                            color: #61DAFB;
+                        }
+                        #redux{
+                            color: #764ABC;
+                        }
+                        #node{
+                            color: #539E43;
+                        }
+                        #express{
+                            color: #47535e;
+                        }
+                        #mongo{
+                            color: #01EC64;
+                        }
+                        #sql{
+                            color: #FFDA44;
+                        }
+                    }
+                    .carousel:hover{
+                        animation-play-state: paused;
+                    }
+                }
             }
         }
     }
+}
+@keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-300px * 10)); }
 }
 
 @keyframes img1 {

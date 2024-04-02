@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaHtml5, FaCss3Alt, FaSass, FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
 import { FaInstagram, FaXTwitter, FaFacebook } from "react-icons/fa6";
+import { TbBrandJavascript } from "react-icons/tb";
+import { SiRedux, SiExpress, SiMongodb } from "react-icons/si";
 import { CgWebsite } from "react-icons/cg";
 import data from '../data/ChartData';
 import Img1 from '../assets/imgs/Poza 1.png';
@@ -24,6 +26,10 @@ export default function Acasa() {
     }
 
     useEffect(() => {
+        // // Carousel
+        // const copyCarousel = document.querySelector('.carousel').cloneNode(true);
+        // document.querySelector('.carousel').appendChild(copyCarousel);
+
         const interval = setInterval(() => {
             setDot(prevDot => (prevDot < dataCard.length ? prevDot + 1 : 1));
         }, 10000);
@@ -200,7 +206,7 @@ export default function Acasa() {
                                     </div>
                                 </div>
                                 <div className='card' style={{opacity: opacity2}}>
-                                    <h3><CgWebsite className='icon' />{dataCard[0].title}</h3>
+                                    <h3><CgWebsite className='icon' />{dataCard[2].title}</h3>
                                     <p>{dataCard[2].text}</p>
                                     <div className='ideas'>
                                         <span>{dataCard[2].ideas[0]}</span>
@@ -252,8 +258,30 @@ export default function Acasa() {
                             </div>
                         </div>
                     </div>
+                    <h2>Tehnologiile folosite de echipa noastra</h2>
                     <div className='sec-4'>
-
+                        <div className='carouselBox'>
+                            <div className='left'></div>
+                            <div className='right'></div>
+                            <ul className='carousel'>
+                                <li><FaHtml5 className='icon' id='html' /><span>HTML</span></li>
+                                <li><FaCss3Alt className='icon' id='css' /><span>CSS</span></li>
+                                <li><FaSass className='icon' id='sass' /><span>SASS</span></li>
+                                <li><TbBrandJavascript className='icon' id='js' /><span>JavaScript</span></li>
+                                <li><FaReact className='icon' id='react' /><span>React</span></li>
+                                <li><SiRedux className='icon' id='redux' /><span>Redux</span></li>
+                                <li><FaNodeJs className='icon' id='node' /><span>Node.js</span></li>
+                                <li><SiExpress className='icon' id='express' /><span>Express.js</span></li>
+                                <li><SiMongodb className='icon' id='mongo' /><span>MongoDB</span></li>
+                                <li><FaDatabase className='icon' id='sql' /><span>Sql</span></li>
+                                <li><FaHtml5 className='icon' id='html' /><span>HTML</span></li>
+                                <li><FaCss3Alt className='icon' id='css' /><span>CSS</span></li>
+                                <li><FaSass className='icon' id='sass' /><span>SASS</span></li>
+                                <li><TbBrandJavascript className='icon' id='js' /><span>JavaScript</span></li>
+                                <li><FaReact className='icon' id='react' /><span>React</span></li>
+                                <li><SiRedux className='icon' id='redux' /><span>Redux</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </main>
             </div>
