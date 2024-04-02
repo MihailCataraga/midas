@@ -9,20 +9,20 @@ import En from '../assets/imgs/flag_gb-4x3.png';
 
 export default function Navbar() {
   const menuShow = () => {
-    const menu = document.getElementById('menu');
+    const menu = document.getElementById('menuBox');
     menu.style.display = 'flex';
     menu.style.animation = 'menuShow 0.5s ease-in-out';
   }
   const menuClose = () => {
-    const menu = document.getElementById('menu');
+    const menu = document.getElementById('menuBox');
     menu.style.animation = 'menuClose 0.5s ease-in-out';
     setTimeout(() => {
       menu.style.display = 'none';
     }, 500)
   }
   const handleClickOutside = (event) => {
-    const menu = document.getElementById('menu');
-    if (menu.style.display === 'flex' && !event.target.closest('.menu')) {
+    const menu = document.getElementById('menuBox');
+    if (menu.style.display === 'flex' && !event.target.closest('.menuBox')) {
       menuClose();
     }
   };
@@ -36,32 +36,39 @@ export default function Navbar() {
   }, []);
   return (
     <div className='navbar'>
-      <Link>CONTACTE</Link>
+      <div className='contactBox'>
+        <Link to={'/'}>CONTACTE</Link>
+      </div>
+      
       <div className='logo'>
         <p>Midas Group</p>
       </div>
       <div className='menuIcon'>
         <MdOutlineMenu className='icon' onClick={menuShow} />
       </div>
-      <div className='menu' id='menu'>
-        <MdClose className='icon' onClick={menuClose} />
-        <nav>
-          <NavLink to={'/'} >Acasa</NavLink>
-          <NavLink to={'/despreNoi'}>Despre Noi</NavLink>
-          <NavLink to={'/servicii'}>Servicii</NavLink>
-          <NavLink to={'/portofoliu'}>Portofoliu</NavLink>
-          <div className='lang'>
-            <img src={Ro} alt='Ro' />
-            <img src={Ru} alt='Ru' />
-            <img src={En} alt='En' />
+      <div className='menuBox' id='menuBox'>
+        <div className='menu' id='menu'>
+          <MdClose className='icon' onClick={menuClose} />
+          <nav>
+            <NavLink to={'/'} >Acasa</NavLink>
+            <NavLink to={'/despreNoi'}>Despre Noi</NavLink>
+            <NavLink to={'/servicii'}>Servicii</NavLink>
+            <NavLink to={'/portofoliu'}>Portofoliu</NavLink>
+            <div className='lang'>
+              <img src={Ro} alt='Ro' />
+              <img src={Ru} alt='Ru' />
+              <img src={En} alt='En' />
+            </div>
+          </nav>
+          <div className='socialBox'>
+            <div className='social'>
+              <a href='/'><FaInstagram className='icon' /></a>
+              <a href='/'><FaFacebookF className='icon' /></a>
+              <a href='/'><FaXTwitter className='icon' /></a>
+              <a href='/'><FaLinkedin className='icon' /></a>
+            </div>
           </div>
-        </nav>
-        <div className='social'>
-          <a href='/'><FaInstagram className='icon' /></a>
-          <a href='/'><FaFacebookF className='icon' /></a>
-          <a href='/'><FaXTwitter className='icon' /></a>
-          <a href='/'><FaLinkedin className='icon' /></a>
-          </div>
+        </div>
       </div>
     </div>
   )

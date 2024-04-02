@@ -1,98 +1,138 @@
+@import './variables.scss';
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 40px 80px;
     position: relative;
-    a {
-        padding: 10px 25px;
-        background: transparent;
-        border: 1px solid #ffffff;
-        color: #ffffff;
+    .contactBox{
+        display: flex;
+        align-items: center;
+        padding: 2px 2px;
         border-radius: 25px;
-        font-size: 18px;
-        text-decoration: none;
-        cursor: pointer;
+        background: $gradient;
+        a {
+            padding: 10px 25px;
+            background: $bgColor;
+            color: $color;
+            border-radius: 25px;
+            font-size: 18px;
+            text-decoration: none;
+            cursor: pointer;
+        }
     }
+    
     .logo {
         p {
-            color: #ffffff;
+            color: $color;
             font-size: 36px;
         }
     }
 
     .menuIcon {
-        .icon {
-            color: #ffffff;
+        .icon{
+            color: $color;
             font-size: 32px;
             cursor: pointer;
+            transition: 0.5s ease-in-out;
+        }
+        .icon:hover{
+            transform: scale(1.2);
         }
     }
-    .menu{
+    .menuBox{
         position: fixed;
-        width: 300px;
+        width: 302px;
         height: 100vh;
-        background-color: rgb(32, 13, 56);
+        background: $gradient;
         top: 0;
         right: 0px;
-        z-index: 1;
+        z-index: 999;
         display: none;
-        flex-direction: column;
-        border-left: 1px solid white;
-        .icon{
-            color: #ffffff;
-            font-size: 32px;
-            margin: 10px 15px;
-            cursor: pointer;
-        }
-        nav{
-            display: flex;
-            flex-direction: column;
-            margin-top: 50px;
-            a{
-                padding: 0;
-                border: none;
-                font-size: 24px;
-                margin: 5px 0 5px 25px;
-            }
-            a:hover{
-                color: #793e92;
-            }
-            .active{
-                color: #793e92;
-            }
-            .lang{
-                display: flex;
-                align-items: center;
-                margin-left: 25px;
-                img{
-                    width: 30px;
-                    margin-right: 20px;
-                    margin-top: 20px;
-                }
-            }
-        }
-        .social{
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            display: flex;
-            align-items: center;
-            display: flex;
+        .menu{
             width: 300px;
-            align-items: center;
-            justify-content: space-around;
-            padding: 10px 0;
-            border-top: 1px solid white;
-            a{
-                padding: 0;
-                border: none;
-                .icon{
-                    font-size: 28px;
-                    cursor: pointer;
+            height: 100vh;
+            margin-left: 2px;
+            background-color: $bgColor;
+            flex-direction: column;
+            .icon{
+                color: $color;
+                font-size: 32px;
+                margin: 10px 15px;
+                cursor: pointer;
+                transition: 0.5s ease-in-out;
+            }
+            .icon:hover{
+                transform: scale(1.2);
+            }
+            nav{
+                display: flex;
+                flex-direction: column;
+                margin-top: 50px;
+                a{
+                    padding: 0;
+                    border: none;
+                    font-size: 24px;
+                    margin: 5px 0 5px 25px;
+                    color: $color;
+                    text-decoration: none;
+                    transition: 0.5s ease-in-out;
+                }
+                a:hover{
+                    color: $hover;
+                }
+                .active{
+                    color: $hover;
+                }
+                .lang{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 25px;
+                    img{
+                        width: 30px;
+                        margin-right: 20px;
+                        margin-top: 20px;
+                        transition: 0.5s ease-in-out;
+                    }
+                    img:hover{
+                        transform: scale(1.2);
+                    }
                 }
             }
-            
+            .socialBox{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                padding-top: 2px;
+                background: $gradient;
+                display: flex;
+                align-items: flex-end;
+                .social{
+                    background-color: $bgColor;
+                    bottom: 0;
+                    right: 0;
+                    display: flex;
+                    align-items: center;
+                    width: 300px;
+                    align-items: center;
+                    justify-content: space-around;
+                    padding: 10px 0;
+                    a{
+                        padding: 0;
+                        border: none;
+                        transition: 0.5s ease-in-out;
+                        .icon{
+                            font-size: 28px;
+                            cursor: pointer;
+                        }
+                    }
+                    a:hover{
+                        transform: scale(1.2);
+                    }
+                    
+                }
+            }
         }
     }
 }

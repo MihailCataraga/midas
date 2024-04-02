@@ -1,4 +1,4 @@
-
+@import './__partition/variables.scss';
 
 *{
     margin: 0;
@@ -6,7 +6,7 @@
 }
 body{
     // background-image: url('../assets/imgs/background.jpeg');
-    background-color: rgb(32, 13, 56);
+    background-color: $bgColor;
     background-attachment: fixed;
     background-repeat: no-repeat;
     overflow-x: hidden
