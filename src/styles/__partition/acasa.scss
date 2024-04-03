@@ -590,6 +590,10 @@
                                 color: $color;
                                 border: none;
                                 border-radius: 20px;
+                                cursor: pointer;
+                            }
+                            button[disabled='disabled'] {
+                                cursor: no-drop;
                             }
                         }
                         

@@ -302,10 +302,10 @@ export default function Acasa() {
                         <div className='left'>
                             <h3>Contactaţi-ne</h3>
                             <form>
-                                <input type='text' className='input' name='name' placeholder='Nume' onChange={handleChangeData} />
-                                <input type='number' className='input' name='number' placeholder='Număr' onChange={handleChangeData} />
-                                <input type='email' className='input' name='email' placeholder='Email' onChange={handleChangeData} />
-                                <textarea placeholder='Mesaj' onChange={handleChangeData} />
+                                <input type='text' className='input' name='name' placeholder='Nume (obligatoriu)' onChange={handleChangeData} />
+                                <input type='number' className='input' name='number' placeholder='Număr (obligatoriu)' onChange={handleChangeData} />
+                                <input type='email' className='input' name='email' placeholder='Email (obligatoriu)' onChange={handleChangeData} />
+                                <textarea placeholder='Mesaj(opțional)' onChange={handleChangeData} />
                                 <div className='check'>
                                     <FaRegCheckCircle className='icon' style={{ color: form.chack ? '#9111e6' : '#ebebeb' }} id='checkIcon' onClick={() => setForm({...form, chack: !form.chack})} />
                                     <label>Accept <Link to='/'>politica de confidențialitate</Link></label>
