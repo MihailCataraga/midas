@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { FaSearch, FaHtml5, FaCss3Alt, FaSass, FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
-import { FaInstagram, FaXTwitter, FaFacebook } from "react-icons/fa6";
+import { FaSearch, FaHtml5, FaCss3Alt, FaSass, FaReact, FaNodeJs, FaDatabase, FaRegCheckCircle } from "react-icons/fa";
+import { FaInstagram, FaXTwitter, FaFacebook, FaLinkedin } from "react-icons/fa6";
 import { TbBrandJavascript } from "react-icons/tb";
 import { SiRedux, SiExpress, SiMongodb } from "react-icons/si";
 import { CgWebsite } from "react-icons/cg";
@@ -11,28 +11,44 @@ import Img3 from '../assets/imgs/Poza 3.png';
 import Navbar from '../components/Navbar';
 import { Area, AreaChart, CartesianGrid, XAxis, YAxis } from 'recharts';
 import dataCard from '../data/CardData';
+import { Link } from 'react-router-dom';
 
 export default function Acasa() {
-    const [dot, setDot] = useState(1);
     const [opacity1, setOpacity1] = useState(0);
     const [opacity2, setOpacity2] = useState(0);
     const [opacity3, setOpacity3] = useState(0);
     const [opacity4, setOpacity4] = useState(0);
     const [opacity5, setOpacity5] = useState(0);
     const [opacity6, setOpacity6] = useState(0);
-    const click = () => {
-        const card = document.getElementById('cardBox');
-        card.style.animation = 'display 10s linear infinite';
-    }
+    const [form, setForm] = useState({
+        name: '',
+        number: '',
+        email: '',
+        message: '',
+        chack: false
+    })
+    const handleChangeData = (event) => {
+        const { name, value } = event.target;
+        setForm({
+            ...form,
+            [name]: value
+        });
+    };
 
     useEffect(() => {
-        // // Carousel
-        // const copyCarousel = document.querySelector('.carousel').cloneNode(true);
-        // document.querySelector('.carousel').appendChild(copyCarousel);
 
-        const interval = setInterval(() => {
-            setDot(prevDot => (prevDot < dataCard.length ? prevDot + 1 : 1));
-        }, 10000);
+        // Button Trimite
+        const elemButton = document.getElementById('submit')
+        if (form.chack === false) {
+            elemButton.setAttribute('disabled', 'disabled');
+        } else {
+            elemButton.removeAttribute('disabled');
+        }
+        if ((form.chack !== false && form.name !== '') && (form.number !== '' && form.email !== '')) {
+            elemButton.removeAttribute('disabled');
+        } else {
+            elemButton.setAttribute('disabled', 'disabled');
+        }
 
         const figura = document.getElementById('figura');
 
@@ -86,9 +102,8 @@ export default function Acasa() {
         return () => {
             document.removeEventListener('mousemove', handleMouseMove);
             document.removeEventListener('scroll', handleScroll);
-            clearInterval(interval);
         };
-    }, []);
+    }, [form]);
 
     // Width pentru chart
     const width = window.innerWidth / 100 * 30;
@@ -281,6 +296,37 @@ export default function Acasa() {
                                 <li><FaReact className='icon' id='react' /><span>React</span></li>
                                 <li><SiRedux className='icon' id='redux' /><span>Redux</span></li>
                             </ul>
+                        </div>
+                    </div>
+                    <div className='sec-5'>
+                        <div className='left'>
+                            <h3>Contactaţi-ne</h3>
+                            <form>
+                                <input type='text' className='input' name='name' placeholder='Nume' onChange={handleChangeData} />
+                                <input type='number' className='input' name='number' placeholder='Număr' onChange={handleChangeData} />
+                                <input type='email' className='input' name='email' placeholder='Email' onChange={handleChangeData} />
+                                <textarea placeholder='Mesaj' onChange={handleChangeData} />
+                                <div className='check'>
+                                    <FaRegCheckCircle className='icon' style={{ color: form.chack ? '#9111e6' : '#ebebeb' }} id='checkIcon' onClick={() => setForm({...form, chack: !form.chack})} />
+                                    <label>Accept <Link to='/'>politica de confidențialitate</Link></label>
+                                </div>
+                                <div className='buttonBox'>
+                                    <button id='submit' >TRIMITE</button>
+                                </div>
+                                
+                            </form>
+                        </div>
+                        <div className='right'>
+                            <h3>Midas Group</h3>
+                            <p>+373 12345678</p>
+                            <p>midasgroup@gmail.com</p>
+                            <div className='social'>
+                                <FaInstagram className='icon' />
+                                <FaFacebook className='icon' />
+                                <FaXTwitter className='icon' />
+                                <FaLinkedin className='icon' />
+                                <Link to='/contacte'>MAI MULTE</Link>
+                            </div>
                         </div>
                     </div>
                 </main>
