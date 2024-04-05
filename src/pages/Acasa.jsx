@@ -12,6 +12,7 @@ import Navbar from '../components/Navbar';
 import { Area, AreaChart, CartesianGrid, XAxis, YAxis } from 'recharts';
 import dataCard from '../data/CardData';
 import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 export default function Acasa() {
     const [opacity1, setOpacity1] = useState(0);
@@ -19,7 +20,6 @@ export default function Acasa() {
     const [opacity3, setOpacity3] = useState(0);
     const [opacity4, setOpacity4] = useState(0);
     const [opacity5, setOpacity5] = useState(0);
-    const [opacity6, setOpacity6] = useState(0);
     const [form, setForm] = useState({
         name: '',
         number: '',
@@ -74,24 +74,21 @@ export default function Acasa() {
             const startScroll = 1500; // Opacitatea începe să crească de la această valoare de derulare
             const stopScroll = 2100; // Opacitatea se oprește să crească de la această valoare de derulare
             // Calculăm opacitatea în funcție de poziția de derulare
-            const newOpacity1 = Math.min(1, (scrollY - 1500) / (2100 - 1500));
+            const newOpacity1 = Math.min(1, (scrollY - 1600) / (2200 - 1600));
             // Actualizăm starea opacității
             setOpacity1(newOpacity1);
-            const newOpacity2 = Math.min(1, (scrollY - 2300) / (2900 - 2300));
+            const newOpacity2 = Math.min(1, (scrollY - 2500) / (3100 - 2500));
             // Actualizăm starea opacității
             setOpacity2(newOpacity2);
-            const newOpacity3 = Math.min(1, (scrollY - 3200) / (3800 - 3200));
+            const newOpacity3 = Math.min(1, (scrollY - 3400) / (4000 - 3400));
             // Actualizăm starea opacității
             setOpacity3(newOpacity3);
-            const newOpacity4 = Math.min(1, (scrollY - 4100) / (4700 - 4100));
+            const newOpacity4 = Math.min(1, (scrollY - 4300) / (4900 - 4300));
             // Actualizăm starea opacității
             setOpacity4(newOpacity4);
-            const newOpacity5 = Math.min(1, (scrollY - 5000) / (5600 - 5000));
+            const newOpacity5 = Math.min(1, (scrollY - 5200) / (5800 - 5200));
             // Actualizăm starea opacității
             setOpacity5(newOpacity5);
-            const newOpacity6 = Math.min(1, (scrollY - 5900) / (6500 - 5900));
-            // Actualizăm starea opacității
-            setOpacity6(newOpacity6);
         }
 
         // Atașăm evenimentul de mișcare a cursorului la document
@@ -260,16 +257,6 @@ export default function Acasa() {
                                         <span>{dataCard[5].ideas[3]}</span>
                                     </div>
                                 </div>
-                                <div className='card' style={{opacity: opacity6}}>
-                                    <h3><CgWebsite className='icon' />{dataCard[6].title}</h3>
-                                    <p>{dataCard[6].text}</p>
-                                    <div className='ideas'>
-                                        <span>{dataCard[6].ideas[0]}</span>
-                                        <span>{dataCard[6].ideas[1]}</span>
-                                        <span>{dataCard[6].ideas[2]}</span>
-                                        <span>{dataCard[6].ideas[3]}</span>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -325,11 +312,14 @@ export default function Acasa() {
                                 <FaFacebook className='icon' />
                                 <FaXTwitter className='icon' />
                                 <FaLinkedin className='icon' />
-                                <Link to='/contacte'>MAI MULTE</Link>
+                                <div className='contactBox'>
+                                    <Link to='/contacte'>MAI MULTE</Link>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </main>
+                <Footer />
             </div>
         </div>
     )

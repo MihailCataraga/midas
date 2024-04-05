@@ -4,8 +4,8 @@
     #figura {
         width: 1px;
         height: 1px;
-        background-color: rgba(185, 67, 214, 0.3);
-        box-shadow: 0 0 500px 500px rgba(185, 67, 214, 0.3);
+        background-color: rgba(185, 67, 214, 0.2);
+        box-shadow: 0 0 400px 400px rgba(185, 67, 214, 0.2);
         position: fixed;
         border-radius: 50%;
         z-index: -2;
@@ -381,10 +381,6 @@
                             top: 200px;
                             opacity: 0;
                         }
-                        .card:nth-child(7) {
-                            top: 220px;
-                            opacity: 0;
-                        }
                     }
                 }
             }
@@ -488,15 +484,16 @@
             .sec-5{
                 display: flex;
                 align-items: center;
-                gap: 50px;
+                justify-content: center;
+                gap: 10vw;
                 padding: 0 5vw;
                 margin-top: 50px;
                 margin-bottom: 50px;
                 .left{
-                    flex: 1;
+                    // flex: 1;
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    // align-items: center;
+                    // justify-content: center;
                     flex-direction: column;
                     h3{
                         text-align: center;
@@ -575,7 +572,7 @@
                         }
                         .buttonBox{
                             width: 304px;
-                            height: 36px;
+                            height: 46px;
                             display: flex;
                             align-items: center;
                             justify-content: center;
@@ -586,7 +583,7 @@
                                 width: 300px;
                                 background-color: $bgColor;
                                 font-size: 18px;
-                                padding: 5px 0;
+                                padding: 10px 0;
                                 color: $color;
                                 border: none;
                                 border-radius: 20px;
@@ -600,20 +597,45 @@
                     }
                 }
                 .right{
-                    flex: 1;
+                    // flex: 1;
                     h3{
-
+                        font-size: 36px;
+                        color: $color;
+                        margin: 20px 10px;
                     }
                     p{
-
+                        font-size: 20px;
+                        color: $color;
+                        margin: 10px;
                     }
                     .social{
+                        color: $color;
+                        display: flex;
+                        align-items: center;
                         .icon{
-
+                            font-size: 24px;
+                            margin: 10px;
                         }
-                        a{
-
+                        .contactBox{
+                            width: 144px;
+                            height: 45px;
+                            background: $gradient;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 25px;
+                            margin-left: 10px;
+                            a{
+                                color: $color;
+                                background-color: $bgColor;
+                                padding: 10px 20px;
+                                border: none;
+                                border-radius: 20px;
+                                font-size: 18px;
+                                text-decoration: none;
+                            }
                         }
+                        
                     }
                 }
             }

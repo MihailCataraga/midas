@@ -1,0 +1,51 @@
+@import './variables.scss';
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    background: $gradient;
+    .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 40px 10vw;
+        background-color: #0F002E;
+        margin: 2px 0;
+        h3{
+            font-size: 36px;
+            color: $color;
+        }
+        .center{
+            display: flex;
+            flex-direction: column;
+            a{
+                color: $color;
+                text-decoration: none;
+                margin: 5px 0;
+                font-size: 16px;
+            }
+            a:hover{
+                color: $hover;
+            }
+        }
+        .right{
+            display: flex;
+            flex-direction: column;
+            a{
+                color: $color;
+                text-decoration: none;
+                margin: 5px 0;
+                font-size: 16px;
+            }
+            a:hover{
+                color: $hover;
+            }
+        }
+    }
+    p{
+        text-align: center;
+        background-color: #0F002E;
+        padding: 20px 0;
+        color: $color;
+    }
+}

@@ -35,12 +35,6 @@ const data = [
         text: 'Este un site web care oferă cursuri și materiale de învățare online. Utilizatorii pot accesa cursuri, urmări lecții, completa exerciții și interacționa cu instructorii sau alți participanți. ',
         ideas: ['Interactiv', 'Eficient', 'Informativ', 'Flexibil']
     },
-    {
-        id: 7,
-        title: 'Orice alt tip de website',
-        text: 'Suntem capabili să dezvoltăm aproape orice tip de site web, adaptat nevoilor și cerințelor specifice ale clienților noștri. Avem expertiza și resursele necesare pentru a crea soluții personalizate și eficiente.',
-        ideas: ['Personalizat', 'Eficient', 'Profesional', 'Creativ']
-    },
 ]
 
 export default data;
