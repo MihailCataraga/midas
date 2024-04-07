@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaSearch, FaHtml5, FaCss3Alt, FaSass, FaReact, FaNodeJs, FaDatabase, FaRegCheckCircle } from "react-icons/fa";
+import { FaSearch, FaHtml5, FaCss3Alt, FaSass, FaReact, FaNodeJs, FaDatabase, FaRegCheckCircle, FaRegCircle } from "react-icons/fa";
 import { FaInstagram, FaXTwitter, FaFacebook, FaLinkedin } from "react-icons/fa6";
 import { TbBrandJavascript } from "react-icons/tb";
 import { SiRedux, SiExpress, SiMongodb } from "react-icons/si";
@@ -25,7 +25,7 @@ export default function Acasa() {
         number: '',
         email: '',
         message: '',
-        chack: false
+        chack: true
     })
     const handleChangeData = (event) => {
         const { name, value } = event.target;
@@ -293,10 +293,16 @@ export default function Acasa() {
                                 <input type='number' className='input' name='number' placeholder='Număr (obligatoriu)' onChange={handleChangeData} />
                                 <input type='email' className='input' name='email' placeholder='Email (obligatoriu)' onChange={handleChangeData} />
                                 <textarea placeholder='Mesaj(opțional)' onChange={handleChangeData} />
-                                <div className='check'>
-                                    <FaRegCheckCircle className='icon' style={{ color: form.chack ? '#9111e6' : '#ebebeb' }} id='checkIcon' onClick={() => setForm({...form, chack: !form.chack})} />
-                                    <label>Accept <Link to='/'>politica de confidențialitate</Link></label>
-                                </div>
+                                {form.chack 
+                                    ? <div className='check'>
+                                        <FaRegCheckCircle className='icon' style={{ color: '#9111e6' }} id='checkIcon' onClick={() => setForm({...form, chack: !form.chack})} />
+                                        <label>Accept <Link to='/'>politica de confidențialitate</Link></label>
+                                    </div>
+                                    : <div className='check'>
+                                        <FaRegCircle className='icon' style={{ color: '#ebebeb' }} id='checkIcon' onClick={() => setForm({...form, chack: !form.chack})} />
+                                        <label>Accept <Link to='/'>politica de confidențialitate</Link></label>
+                                    </div> 
+                                }
                                 <div className='buttonBox'>
                                     <button id='submit' >TRIMITE</button>
                                 </div>

@@ -19,7 +19,7 @@ export default function Footer() {
                 <Link to='/'>Despre Noi</Link>
             </div>
         </div>
-        <p>@MIdas Group 2024: Toate drepturile rezervate</p>
+        <p>@Midas Group 2024: Toate drepturile rezervate</p>
     </div>
   )
 }
