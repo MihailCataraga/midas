@@ -318,9 +318,9 @@ export default function Acasa() {
                                 <FaFacebook className='icon' />
                                 <FaXTwitter className='icon' />
                                 <FaLinkedin className='icon' />
-                                <div className='contactBox'>
-                                    <Link to='/contacte'>MAI MULTE</Link>
-                                </div>
+                            </div>
+                            <div className='contactBox'>
+                                <Link to='/contacte'>MAI MULTE</Link>
                             </div>
                         </div>
                     </div>

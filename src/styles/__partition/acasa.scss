@@ -385,11 +385,11 @@
                 }
             }
             h2{
-                margin-top: -400px;
+                margin-top: -450px;
                 text-align: center;
                 font-size: 40px;
                 color: white;
-                margin-bottom: 20px;
+                margin-bottom: 40px;
             }
             .sec-4{
                 background-color: transparent;
@@ -397,9 +397,9 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                background: radial-gradient(circle, rgba(213,13,226,1) 0%, rgba(145,17,230,1) 100%);
+                background: $gradient;
                 .carouselBox{
-                    height: 196px;
+                    height: 198px;
                     background-color: #200d38;
                     position: relative;
                     .left{
@@ -407,7 +407,7 @@
                         background: linear-gradient(90deg, rgba(32,13,56,1) 0%, rgba(32,13,56,0) 100%);
                         height: 200px;
                         width: 200px;
-                        top: -2px;
+                        top: -1px;
                         left: 0;
                         z-index: 2;
                     }
@@ -416,13 +416,13 @@
                         background: linear-gradient(90deg, rgba(32,13,56,0) 0%, rgba(32,13,56,1) 100%);
                         height: 200px;
                         width: 200px;
-                        top: -2px;
+                        top: -1px;
                         right: 0;
                         z-index: 2;
                     }
                     .carousel{
                         display: flex;
-                        height: 196px;
+                        height: 198px;
                         background-color: transparent;
                         justify-content: space-between;
                         align-items: center;
@@ -487,8 +487,8 @@
                 justify-content: center;
                 gap: 10vw;
                 padding: 0 5vw;
-                margin-top: 50px;
-                margin-bottom: 50px;
+                margin-top: 100px;
+                margin-bottom: 100px;
                 .left{
                     // flex: 1;
                     display: flex;
@@ -556,6 +556,7 @@
                             display: flex;
                             align-items: center;
                             justify-content: flex-start;
+                            margin: 10px 0;
                             gap: 0;
                             .icon{
                                 font-size: 22px;
@@ -615,27 +616,28 @@
                         .icon{
                             font-size: 24px;
                             margin: 10px;
+                            cursor: pointer;
+                        }  
+                    }
+                    .contactBox{
+                        width: 154px;
+                        height: 45px;
+                        background: $gradient;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50px;
+                        margin-left: 10px;
+                        margin-top: 10px;
+                        a{
+                            color: $color;
+                            background-color: $bgColor;
+                            padding: 10px 25px;
+                            border: none;
+                            border-radius: 20px;
+                            font-size: 18px;
+                            text-decoration: none;
                         }
-                        .contactBox{
-                            width: 144px;
-                            height: 45px;
-                            background: $gradient;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            border-radius: 25px;
-                            margin-left: 10px;
-                            a{
-                                color: $color;
-                                background-color: $bgColor;
-                                padding: 10px 20px;
-                                border: none;
-                                border-radius: 20px;
-                                font-size: 18px;
-                                text-decoration: none;
-                            }
-                        }
-                        
                     }
                 }
             }
