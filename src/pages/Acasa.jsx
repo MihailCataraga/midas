@@ -75,19 +75,19 @@ export default function Acasa() {
             const startScroll = 1500; // Opacitatea începe să crească de la această valoare de derulare
             const stopScroll = 2100; // Opacitatea se oprește să crească de la această valoare de derulare
             // Calculăm opacitatea în funcție de poziția de derulare
-            const newOpacity1 = Math.min(1, (scrollY - 1600) / (2200 - 1600));
+            const newOpacity1 = Math.min(1, (scrollY - 1700) / (2400 - 1700));
             // Actualizăm starea opacității
             setOpacity1(newOpacity1);
-            const newOpacity2 = Math.min(1, (scrollY - 2500) / (3100 - 2500));
+            const newOpacity2 = Math.min(1, (scrollY - 2600) / (3300 - 2600));
             // Actualizăm starea opacității
             setOpacity2(newOpacity2);
-            const newOpacity3 = Math.min(1, (scrollY - 3400) / (4000 - 3400));
+            const newOpacity3 = Math.min(1, (scrollY - 3500) / (4200 - 3500));
             // Actualizăm starea opacității
             setOpacity3(newOpacity3);
-            const newOpacity4 = Math.min(1, (scrollY - 4300) / (4900 - 4300));
+            const newOpacity4 = Math.min(1, (scrollY - 4400) / (5100 - 4400));
             // Actualizăm starea opacității
             setOpacity4(newOpacity4);
-            const newOpacity5 = Math.min(1, (scrollY - 5200) / (5800 - 5200));
+            const newOpacity5 = Math.min(1, (scrollY - 5300) / (6000 - 5300));
             // Actualizăm starea opacității
             setOpacity5(newOpacity5);
         }
