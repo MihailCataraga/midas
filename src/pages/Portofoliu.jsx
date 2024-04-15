@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import GoToUp from '../components/GoToUp'
 import Footer from '../components/Footer'
+import data from '../data/Portofoliu'
+import { Link } from 'react-router-dom'
 
 export default function Portofoliu() {
+    const [projects, setProjects] = useState(data)
     useEffect(() => {
         const figura = document.getElementById('figura');
 
@@ -34,7 +37,20 @@ export default function Portofoliu() {
         <div className='portofoliu'>
             <Navbar />
             <main>
-                <img src='/img/Poza1.png' />
+                <h1>Portofoliu</h1>
+                <p>Unele dintre proiectele noastre</p>
+                <div className='projects'>
+                    {
+                        projects.map((project) => {
+                            return (
+                                <Link to={project.link} className='projectBox' key={project.id}>
+                                    <img src={project.img} alt={`Img ${project.title}`} />
+                                    <h4>{project.title}</h4>
+                                </Link>
+                            )
+                        })
+                    }
+                </div>
             </main>
             <GoToUp />
             <Footer />

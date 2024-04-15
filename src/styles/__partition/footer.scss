@@ -9,7 +9,7 @@
         align-items: center;
         justify-content: space-around;
         padding: 40px 10vw;
-        background-color: #0F002E;
+        background-color: $darckbg;
         margin: 1px 0;
         h3{
             font-size: 36px;
@@ -44,7 +44,7 @@
     }
     p{
         text-align: center;
-        background-color: #0F002E;
+        background-color: $darckbg;
         padding: 20px 0;
         color: $color;
     }
