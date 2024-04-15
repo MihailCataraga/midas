@@ -238,46 +238,29 @@
             .sec-2 {
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 height: 670px;
-
+                padding: 100px 5vw 50px 5vw;
                 .imgsLeft {
-                    flex: 1;
                     display: flex;
+                    align-items: center;
                     justify-content: center;
-                    position: relative;
-
-                    #img1 {
-                        position: absolute;
-                        top: -125px;
-                        width: 300px;
-                        z-index: 100;
-                        // background-color: red;
-                        animation: img1 18s infinite;
+                    .left{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        justify-content: center;
+                        #img3 {
+                            margin: 0 0 -100px 0;
+                        }
                     }
-
                     #img2 {
-                        position: absolute;
-                        transform: translateX(-150px);
-                        width: 250px;
-                        top: -275px;
-                        z-index: 98;
-                        // background-color: green;
-                        animation: img2 18s infinite;
-                    }
-
-                    #img3 {
-                        position: absolute;
-                        transform: translateX(150px);
-                        width: 250px;
-                        top: -275px;
-                        z-index: 99;
-                        // background-color: blue;
-                        animation: img3 18s infinite;
+                        margin: 0 -100px 0 -100px;
                     }
                 }
 
                 .textRight {
-                    flex: 1;
+                    // flex: 1;
                     display: flex;
                     justify-content: center;
 
@@ -428,7 +411,7 @@
                         align-items: center;
                         list-style-type: none;
                         overflow-x: hidden;
-                        width: calc(300px * 16);
+                        width: calc(300px * 15);
                         animation: scrolling 30s linear infinite;
                         li{
                             width: 300px;
@@ -472,13 +455,10 @@
                         #mongo{
                             color: #01EC64;
                         }
-                        #sql{
-                            color: #FFDA44;
-                        }
                     }
-                    .carousel:hover{
-                        animation-play-state: paused;
-                    }
+                    // .carousel:hover{
+                    //     animation-play-state: paused;
+                    // }
                 }
             }
             .sec-5{
@@ -646,7 +626,7 @@
 }
 @keyframes scrolling {
     0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-300px * 10)); }
+    100% { transform: translateX(calc(-300px * 9)); }
 }
 
 @keyframes img1 {

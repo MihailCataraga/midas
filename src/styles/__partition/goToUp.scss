@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+.goToUp{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background: $gradient;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+    .arrow{
+        padding: 10px 12px;
+        border-radius: 15px;
+        background-color: $bgColor;
+        margin: 2px;
+        .icon{
+            font-size: 28px;
+            color: $color;
+        }
+    }
+}
+.goToUp:hover{
+    transform: scale(1.1);
+}

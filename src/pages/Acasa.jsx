@@ -5,14 +5,15 @@ import { TbBrandJavascript } from "react-icons/tb";
 import { SiRedux, SiExpress, SiMongodb } from "react-icons/si";
 import { CgWebsite } from "react-icons/cg";
 import data from '../data/ChartData';
-import Img1 from '../assets/imgs/Poza 1.png';
-import Img2 from '../assets/imgs/Poza 2.png';
-import Img3 from '../assets/imgs/Poza 3.png';
+import Img1 from '../assets/imgs/Poza1.png';
+import Img2 from '../assets/imgs/Poza2.png';
+import Img3 from '../assets/imgs/Poza3.png';
 import Navbar from '../components/Navbar';
 import { Area, AreaChart, CartesianGrid, XAxis, YAxis } from 'recharts';
 import dataCard from '../data/CardData';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
+import GoToUp from '../components/GoToUp';
 
 export default function Acasa() {
     const [opacity1, setOpacity1] = useState(0);
@@ -27,6 +28,7 @@ export default function Acasa() {
         message: '',
         chack: true
     })
+    
     const handleChangeData = (event) => {
         const { name, value } = event.target;
         setForm({
@@ -36,7 +38,6 @@ export default function Acasa() {
     };
 
     useEffect(() => {
-
         // Button Trimite
         const elemButton = document.getElementById('submit')
         if (form.chack === false) {
@@ -183,9 +184,11 @@ export default function Acasa() {
                     </div>
                     <div className='sec-2'>
                         <div className='imgsLeft'>
-                            <img id='img3' src={Img1} alt='Simbol img 1' />
+                            <div className='left'>
+                                <img id='img3' src={Img1} alt='Simbol img 1' />
+                                <img id='img1' src={Img3} alt='Simbol img 3' />
+                            </div>
                             <img id='img2' src={Img2} alt='Simbol img 2' />
-                            <img id='img1' src={Img3} alt='Simbol img 3' />
                         </div>
                         <div className='textRight'>
                             <p>La Midas Group, credem că fiecare afacere merită să aibă un site web care să se ridice la standardele cele mai înalte de calitate și profesionalism. Suntem dedicați să creăm site-uri web personalizate și inovatoare pentru clienții noștri. Indiferent dacă sunteți o afacere mică sau o corporație mare, suntem aici pentru a vă ajuta să vă transformați viziunea în realitate digitală.</p>
@@ -275,7 +278,6 @@ export default function Acasa() {
                                 <li><FaNodeJs className='icon' id='node' /><span>Node.js</span></li>
                                 <li><SiExpress className='icon' id='express' /><span>Express.js</span></li>
                                 <li><SiMongodb className='icon' id='mongo' /><span>MongoDB</span></li>
-                                <li><FaDatabase className='icon' id='sql' /><span>Sql</span></li>
                                 <li><FaHtml5 className='icon' id='html' /><span>HTML</span></li>
                                 <li><FaCss3Alt className='icon' id='css' /><span>CSS</span></li>
                                 <li><FaSass className='icon' id='sass' /><span>SASS</span></li>
@@ -325,6 +327,7 @@ export default function Acasa() {
                         </div>
                     </div>
                 </main>
+                <GoToUp />
                 <Footer />
             </div>
         </div>

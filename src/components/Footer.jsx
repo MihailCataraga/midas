@@ -13,10 +13,10 @@ export default function Footer() {
                 <Link to='/'>Întrebări fregvente</Link>
             </div>
             <div className='right'>
-                <Link to='/'>Acasa</Link>
                 <Link to='/'>Servicii</Link>
-                <Link to='/'>Contacte</Link>
                 <Link to='/'>Despre Noi</Link>
+                <Link to='/portofoliu'>Portofoliu</Link>
+                <Link to='/'>Contacte</Link>
             </div>
         </div>
         <p>@Midas Group 2024: Toate drepturile rezervate</p>
