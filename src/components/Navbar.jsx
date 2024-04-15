@@ -8,6 +8,12 @@ import Ru from '../assets/imgs/flag_ru-4x3.png';
 import En from '../assets/imgs/flag_gb-4x3.png';
 
 export default function Navbar() {
+  const toUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
   const menuShow = () => {
     const menu = document.getElementById('menuBox');
     menu.style.display = 'flex';
@@ -41,9 +47,9 @@ export default function Navbar() {
       <div className='contactBox'>
         <Link to={'/'}>CONTACTE</Link>
       </div>
-      
+
       <div className='logo'>
-        <p>Midas Group</p>
+        <Link to='/' onClick={toUp}>Midas Group</Link>
       </div>
       <div className='menuIcon'>
         <MdOutlineMenu className='icon' onClick={menuShow} />
