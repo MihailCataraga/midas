@@ -1,0 +1,25 @@
+.portofoliuPage{
+    #figura {
+        width: 1px;
+        height: 1px;
+        background-color: rgba(185, 67, 214, 0.2);
+        box-shadow: 0 0 400px 400px rgba(185, 67, 214, 0.2);
+        position: fixed;
+        border-radius: 50%;
+        z-index: -2;
+        animation: figura 30s infinite linear;
+    }
+    @keyframes figura {
+        from{
+            transform: rotateZ(0deg);
+        }
+        to{
+            transform: rotateZ(360deg);
+        }
+    }
+    .portofoliu{
+        main{
+            
+        }
+    }
+}
