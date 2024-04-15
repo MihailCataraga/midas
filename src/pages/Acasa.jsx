@@ -70,7 +70,6 @@ export default function Acasa() {
         const handleScroll = (event) => {
 
             const scrollY = window.scrollY;
-            console.log(scrollY)
             // Aici puteți ajusta valorile la care doriți să înceapă și să se oprească modificarea opacității
             const startScroll = 1500; // Opacitatea începe să crească de la această valoare de derulare
             const stopScroll = 2100; // Opacitatea se oprește să crească de la această valoare de derulare
@@ -95,11 +94,13 @@ export default function Acasa() {
         // Atașăm evenimentul de mișcare a cursorului la document
         document.addEventListener('mousemove', handleMouseMove);
         document.addEventListener('scroll', handleScroll);
+        window.addEventListener('beforeunload', window.scrollTo({left: 0}));
 
         // Curățăm evenimentele atașate când componenta este dezmontată
         return () => {
             document.removeEventListener('mousemove', handleMouseMove);
             document.removeEventListener('scroll', handleScroll);
+            window.addEventListener('beforeunload', window.scrollTo({left: 0}));
         };
     }, [form]);
 

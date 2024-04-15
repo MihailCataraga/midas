@@ -242,6 +242,7 @@
                 height: 670px;
                 padding: 100px 5vw 50px 5vw;
                 .imgsLeft {
+                    flex: 1;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -260,7 +261,7 @@
                 }
 
                 .textRight {
-                    // flex: 1;
+                    flex: 1;
                     display: flex;
                     justify-content: center;
 
