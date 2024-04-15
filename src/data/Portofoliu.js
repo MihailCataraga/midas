@@ -3,7 +3,7 @@ const data = [
         id: 1,
         title: "Lux Smile",
         link: "https://luxsmile.vercel.app/",
-        img: ""
+        img: "/img/Poza1.png"
     }
 ]
 

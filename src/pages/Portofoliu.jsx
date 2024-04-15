@@ -34,7 +34,7 @@ export default function Portofoliu() {
         <div className='portofoliu'>
             <Navbar />
             <main>
-                <img src='../../src/assets/imgs/Poza1.png' />
+                <img src='/img/Poza1.png' />
             </main>
             <GoToUp />
             <Footer />
