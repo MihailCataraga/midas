@@ -33,6 +33,25 @@ export default function Navbar() {
     }
   };
 
+  const loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
+
+  const contact = () => {
+    const scroll = () => {
+      window.scrollTo({
+        top: 7200,
+        behavior: 'smooth'
+      });
+    }
+    if (window.location.pathname === '/') {
+      scroll()
+    } else {
+      setTimeout(() => {
+        scroll()
+      }, loadTime)
+    }
+  }
+
+
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
     document.addEventListener('scroll', menuClose);
@@ -45,7 +64,7 @@ export default function Navbar() {
   return (
     <div className='navbar'>
       <div className='contactBox'>
-        <Link to={'/'}>CONTACTE</Link>
+        <Link to='/' onClick={() => { contact() }}>CONTACTE</Link>
       </div>
 
       <div className='logo'>

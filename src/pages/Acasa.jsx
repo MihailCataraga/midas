@@ -70,6 +70,7 @@ export default function Acasa() {
         const handleScroll = (event) => {
 
             const scrollY = window.scrollY;
+            console.log(scrollY)
             // Aici puteți ajusta valorile la care doriți să înceapă și să se oprească modificarea opacității
             const startScroll = 1500; // Opacitatea începe să crească de la această valoare de derulare
             const stopScroll = 2100; // Opacitatea se oprește să crească de la această valoare de derulare
@@ -288,7 +289,7 @@ export default function Acasa() {
                             </ul>
                         </div>
                     </div>
-                    <div className='sec-5'>
+                    <div className='sec-5' id='sec-5'>
                         <div className='left'>
                             <h3>Contactaţi-ne</h3>
                             <form>
@@ -315,7 +316,7 @@ export default function Acasa() {
                         <div className='right'>
                             <h3>Midas Group</h3>
                             <p>+373 12345678</p>
-                            <p>midasgroup@gmail.com</p>
+                            <p>info.midasgroup@gmail.com</p>
                             <div className='social'>
                                 <FaInstagram className='icon' />
                                 <FaFacebook className='icon' />
