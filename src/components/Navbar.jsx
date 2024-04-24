@@ -6,6 +6,7 @@ import { Link, NavLink } from 'react-router-dom';
 import Ro from '../assets/imgs/flag_ro-4x3.png';
 import Ru from '../assets/imgs/flag_ru-4x3.png';
 import En from '../assets/imgs/flag_gb-4x3.png';
+import { HashLink } from 'react-router-hash-link';
 
 export default function Navbar() {
   const toUp = () => {
@@ -33,24 +34,6 @@ export default function Navbar() {
     }
   };
 
-  const loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
-
-  const contact = () => {
-    const scroll = () => {
-      window.scrollTo({
-        top: 7200
-      });
-    }
-    if (window.location.pathname === '/') {
-      scroll()
-    } else {
-      setTimeout(() => {
-        scroll()
-      }, loadTime)
-    }
-  }
-
-
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
     document.addEventListener('scroll', menuClose);
@@ -63,7 +46,7 @@ export default function Navbar() {
   return (
     <div className='navbar'>
       <div className='contactBox'>
-        <Link to='/' onClick={() => { contact() }}>CONTACTE</Link>
+        <HashLink to='/#sec-5'>CONTACTE</HashLink>
       </div>
 
       <div className='logo'>
