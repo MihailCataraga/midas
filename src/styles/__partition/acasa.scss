@@ -287,6 +287,9 @@
                         max-width: 34vw;
                         padding: 0 8vw;
                         color: white;
+                        b{
+                            font-size: 26px;
+                        }
                     }
                 }
             }
@@ -302,7 +305,7 @@
                         text-align: center;
                         color: white;
                         position: sticky;
-                        top: 175px;
+                        top: 160px;
                         margin-bottom: 800px;
                         margin-top: 150px;
                     }
@@ -615,26 +618,6 @@
                             margin: 10px;
                             cursor: pointer;
                         }  
-                    }
-                    .contactBox{
-                        width: 154px;
-                        height: 45px;
-                        background: $gradient;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        border-radius: 50px;
-                        margin-left: 10px;
-                        margin-top: 10px;
-                        a{
-                            color: $color;
-                            background-color: $bgColor;
-                            padding: 10px 25px;
-                            border: none;
-                            border-radius: 20px;
-                            font-size: 18px;
-                            text-decoration: none;
-                        }
                     }
                 }
             }

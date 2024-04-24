@@ -70,7 +70,7 @@ export default function Acasa() {
         const handleScroll = (event) => {
 
             const scrollY = window.scrollY;
-            console.log(scrollY)
+            // console.log(scrollY)
             // Aici puteți ajusta valorile la care doriți să înceapă și să se oprească modificarea opacității
             const startScroll = 1500; // Opacitatea începe să crească de la această valoare de derulare
             const stopScroll = 2100; // Opacitatea se oprește să crească de la această valoare de derulare
@@ -193,7 +193,7 @@ export default function Acasa() {
                             <img id='img2' src={Img2} alt='Simbol img 2' />
                         </div>
                         <div className='textRight'>
-                            <p>La Midas Group, credem că fiecare afacere merită să aibă un site web care să se ridice la standardele cele mai înalte de calitate și profesionalism. Suntem dedicați să creăm site-uri web personalizate și inovatoare pentru clienții noștri. Indiferent dacă sunteți o afacere mică sau o corporație mare, suntem aici pentru a vă ajuta să vă transformați viziunea în realitate digitală.</p>
+                            <p>La <b>Midas Group</b>, credem că fiecare afacere merită să aibă un site web care să se ridice la standardele cele mai înalte de calitate și profesionalism. Suntem dedicați să creăm site-uri web personalizate și inovatoare pentru clienții noștri. Indiferent dacă sunteți o afacere mică sau o corporație mare, suntem aici pentru a vă ajuta să vă transformați viziunea în realitate digitală.</p>
                         </div>
                     </div>
                     <div className='sec-3'>
@@ -322,9 +322,6 @@ export default function Acasa() {
                                 <FaFacebook className='icon' />
                                 <FaXTwitter className='icon' />
                                 <FaLinkedin className='icon' />
-                            </div>
-                            <div className='contactBox'>
-                                <Link to='/contacte'>MAI MULTE</Link>
                             </div>
                         </div>
                     </div>

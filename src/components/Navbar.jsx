@@ -63,7 +63,6 @@ export default function Navbar() {
             <NavLink to={'/despreNoi'}>Despre Noi</NavLink>
             <NavLink to={'/servicii'}>Servicii</NavLink>
             <NavLink to={'/portofoliu'}>Portofoliu</NavLink>
-            <NavLink to={'/contacte'}>Contacte</NavLink>
             <div className='lang'>
               <img src={Ro} alt='Ro' />
               <img src={Ru} alt='Ru' />
