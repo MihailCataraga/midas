@@ -38,8 +38,7 @@ export default function Navbar() {
   const contact = () => {
     const scroll = () => {
       window.scrollTo({
-        top: 7200,
-        behavior: 'smooth'
+        top: 7200
       });
     }
     if (window.location.pathname === '/') {
