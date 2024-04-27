@@ -1,0 +1,62 @@
+@import './variables.scss';
+
+.serviciiPage{
+    #figura {
+        width: 1px;
+        height: 1px;
+        background-color: rgba(185, 67, 214, 0.2);
+        box-shadow: 0 0 400px 400px rgba(185, 67, 214, 0.2);
+        position: fixed;
+        border-radius: 50%;
+        z-index: -2;
+        animation: figura 30s infinite linear;
+    }
+
+    @keyframes figura {
+        from {
+            transform: rotateZ(0deg);
+        }
+
+        to {
+            transform: rotateZ(360deg);
+        }
+    }
+    .servicii{
+        main{
+            color: $color;
+            padding: 0 5vw;
+            h1{
+                font-size: 64px;
+                margin: 20px 0;
+            }
+            p{
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            .services{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                gap: 30px;
+                margin-bottom: 50px;
+                margin-top: 50px;
+                .service{
+                    width: 450px;
+                    background-image: url('../assets/imgs/backgroundCard.webp');
+                    margin-bottom: 30px;
+                    padding: 20px 30px;
+                    border-radius: 25px;
+                    border: 2px solid $inputBg;
+                    h2{
+                        font-size: 36px;
+                        margin-bottom: 20px;
+                    }
+                    p{
+                        font-size: 22px;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+}

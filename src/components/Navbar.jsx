@@ -60,7 +60,7 @@ export default function Navbar() {
           <MdClose className='icon' onClick={menuClose} />
           <nav>
             <NavLink to={'/'} >Acasa</NavLink>
-            <NavLink to={'/despreNoi'}>Despre Noi</NavLink>
+            <NavLink to={'/'}>Despre Noi</NavLink>
             <NavLink to={'/servicii'}>Servicii</NavLink>
             <NavLink to={'/portofoliu'}>Portofoliu</NavLink>
             <div className='lang'>

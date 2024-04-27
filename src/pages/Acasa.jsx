@@ -5,9 +5,9 @@ import { TbBrandJavascript } from "react-icons/tb";
 import { SiRedux, SiExpress, SiMongodb } from "react-icons/si";
 import { CgWebsite } from "react-icons/cg";
 import data from '../data/ChartData';
-import Img1 from '../assets/imgs/Poza1.png';
-import Img2 from '../assets/imgs/Poza2.png';
-import Img3 from '../assets/imgs/Poza3.png';
+import Img1 from '../assets/imgs/Poza1.webp';
+import Img2 from '../assets/imgs/Poza2.webp';
+import Img3 from '../assets/imgs/Poza3.webp';
 import Navbar from '../components/Navbar';
 import { Area, AreaChart, CartesianGrid, XAxis, YAxis } from 'recharts';
 import dataCard from '../data/CardData';
@@ -75,19 +75,19 @@ export default function Acasa() {
             const startScroll = 1500; // Opacitatea începe să crească de la această valoare de derulare
             const stopScroll = 2100; // Opacitatea se oprește să crească de la această valoare de derulare
             // Calculăm opacitatea în funcție de poziția de derulare
-            const newOpacity1 = Math.min(1, (scrollY - 1700) / (2400 - 1700));
+            const newOpacity1 = Math.min(1, (scrollY - 1800) / (2500 - 1800));
             // Actualizăm starea opacității
             setOpacity1(newOpacity1);
-            const newOpacity2 = Math.min(1, (scrollY - 2600) / (3300 - 2600));
+            const newOpacity2 = Math.min(1, (scrollY - 2700) / (3400 - 2700));
             // Actualizăm starea opacității
             setOpacity2(newOpacity2);
-            const newOpacity3 = Math.min(1, (scrollY - 3500) / (4200 - 3500));
+            const newOpacity3 = Math.min(1, (scrollY - 3600) / (4300 - 3600));
             // Actualizăm starea opacității
             setOpacity3(newOpacity3);
-            const newOpacity4 = Math.min(1, (scrollY - 4400) / (5100 - 4400));
+            const newOpacity4 = Math.min(1, (scrollY - 4500) / (5200 - 4500));
             // Actualizăm starea opacității
             setOpacity4(newOpacity4);
-            const newOpacity5 = Math.min(1, (scrollY - 5300) / (6000 - 5300));
+            const newOpacity5 = Math.min(1, (scrollY - 5400) / (6100 - 5400));
             // Actualizăm starea opacității
             setOpacity5(newOpacity5);
         }

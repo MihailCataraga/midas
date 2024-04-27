@@ -9,6 +9,8 @@
         position: fixed;
         border-radius: 50%;
         z-index: -2;
+        left: 50%;
+        top: 50%;
         animation: figura 30s infinite linear;
     }
     @keyframes figura {
@@ -136,7 +138,7 @@
 
                     .contentBoxEx {
                         display: flex;
-                        background-image: url('../assets/imgs/backgroundCard.png');
+                        background-image: url('../assets/imgs/backgroundCard.webp');
                         background-repeat: no-repeat;
                         background-size: cover;
                         border: 1px solid #ffffff;
@@ -240,36 +242,40 @@
                 align-items: center;
                 justify-content: center;
                 height: 670px;
-                padding: 100px 5vw 50px 5vw;
+                padding: 10vw 5vw 150px 5vw;
+                gap: 50px;
                 .imgsLeft {
                     flex: 1;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    gap: 20px;
+                    gap: 3vw;
                     .left{
                         display: flex;
                         flex-direction: column;
                         align-items: flex-end;
-                        justify-content: center;
-                        gap: 20px;
+                        // justify-content: center;
+                        gap: 3vw;
                         #img1 {
                             transition: 1s;
+                            width: 25vw;
                         }
                         #img1:hover{
                             transform: scale(1.1);
                         }
                         #img3 {
-                            margin: 0 0 -100px 0;
+                            // margin: 0 0 -10% 0;
                             transition: 1s;
+                            width: 20vw;
                         }
                         #img3:hover{
                             transform: scale(1.1);
                         }
                     }
                     #img2 {
-                        margin: 0 -100px 0 -100px;
+                        // margin: 0 -100px 0 -100px;
                         transition: 1s;
+                        width: 20vw;
                     }
                     #img2:hover{
                         transform: scale(1.1);
@@ -285,7 +291,6 @@
                         font-size: 24px;
                         line-height: 1.5;
                         max-width: 34vw;
-                        padding: 0 8vw;
                         color: white;
                         b{
                             font-size: 26px;
@@ -297,6 +302,7 @@
                 display: flex;
                 justify-content: space-around;
                 margin-top: 50px;
+                padding: 0 5vw;
                 gap: 50px;
                 .left{
                     flex: 1;
@@ -305,6 +311,7 @@
                         text-align: center;
                         color: white;
                         position: sticky;
+                        padding: 0;
                         top: 160px;
                         margin-bottom: 800px;
                         margin-top: 150px;
@@ -319,7 +326,7 @@
                         top: 200px;
                         padding-bottom: 100px;
                         .card{
-                            width: 800px;
+                            // width: 800px;
                             height: 400px;
                             margin-bottom: 50vh;
                             position: sticky;
@@ -330,7 +337,7 @@
                             display: flex;
                             flex-direction: column;
                             justify-content: space-around;
-                            background-image: url('../assets/imgs/backgroundCard.png');
+                            background-image: url('../assets/imgs/backgroundCard.webp');
                             background-repeat: no-repeat;
                             background-size: cover;
                             h3{
